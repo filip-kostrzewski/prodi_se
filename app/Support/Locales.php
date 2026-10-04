@@ -47,8 +47,8 @@ final class Locales
             'pl' => 'kontakt',
         ],
         'privacy' => [
-            'sv' => 'integritet',
-            'pl' => 'prywatnosc',
+            'sv' => 'integritetspolicy',
+            'pl' => 'polityka-prywatnosci',
         ],
         'example.cleaning' => [
             'sv' => 'exempel/stadning',

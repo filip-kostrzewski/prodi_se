@@ -4,11 +4,11 @@ return [
 
     'meta' => [
         'home_title' => 'Prodi — dwujęzyczne strony dla małych firm',
-        'home_description' => 'Dwujęzyczna strona PL/SV, profil Google Business i formularz kontaktowy. Gotowe w około 2 tygodnie, od 4 900 kr exkl. moms. Prodi w Märsta.',
+        'home_description' => 'Dwujęzyczna strona PL/SV, profil Google Business i formularz kontaktowy. Gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms. Prodi w Märsta.',
         'contact_title' => 'Poproś o wycenę — Prodi',
         'contact_description' => 'Napisz krótko o firmie i o pakiecie. Filip odezwie się osobiście. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
-        'privacy_title' => 'Prywatność — Prodi',
-        'privacy_description' => 'Jak Prodi używa danych z formularza wyceny.',
+        'privacy_title' => 'Polityka prywatności — Prodi',
+        'privacy_description' => 'Jak Prodi AB przetwarza dane z formularza wyceny i z reklam leadowych Meta.',
         'cleaning_title' => 'Przykładowy projekt: firma sprzątająca — Prodi',
         'cleaning_description' => 'Przykład jednostronicowej witryny dla firmy sprzątającej. Projekt przykładowy Prodi, nie prawdziwy klient.',
         'painting_description' => 'Przykład strony z podstronami dla firmy malarskiej. Projekt przykładowy Prodi, nie prawdziwy klient.',
@@ -31,20 +31,20 @@ return [
         'examples' => 'Przykłady',
         'faq' => 'Pytania',
         'contact' => 'Kontakt',
-        'privacy' => 'Prywatność',
+        'privacy' => 'Polityka prywatności',
     ],
 
     'hero' => [
         'eyebrow' => 'Studio stron www w Märsta · po polsku i po szwedzku',
-        'title' => 'Dwujęzyczna strona dla Twojej firmy. Gotowa w około dwa tygodnie.',
-        'lead' => 'Zrobię Ci dwujęzyczną stronę PL/SV, ustawię Google Business Profile i formularz kontaktowy — gotowe w około 2 tygodnie, od 4 900 kr exkl. moms.',
+        'title' => 'Dwujęzyczna strona dla Twojej firmy. Gotowa w ok. 2 tygodnie.',
+        'lead' => 'Zrobię Ci dwujęzyczną stronę PL/SV, ustawię Google Business Profile i formularz kontaktowy — gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms.',
         'primary' => 'Poproś o wycenę',
         'secondary' => 'Zobacz pakiety',
         'price_from' => 'od',
         'price' => '4 900 kr',
         'price_note' => 'exkl. moms',
         'facts' => [
-            'Realizacja około dwóch tygodni od otrzymania materiałów',
+            'Realizacja ok. 2 tygodnie od otrzymania materiałów',
             'Domena zostaje Twoja',
             'Profil Google Business i formularz są w cenie',
         ],
@@ -80,7 +80,7 @@ return [
             'start' => 'Jedna strona po polsku i szwedzku, mobile, formularz kontaktowy, Google Business Profile i podstawowe SEO. 4 900 kr exkl. moms.',
             'firma' => 'Do pięciu podstron po polsku i szwedzku, Google Business Profile i lokalne SEO. 7 900 kr exkl. moms.',
             'opieka' => 'Hosting, SSL, kopie zapasowe i drobne zmiany treści do 30 minut miesięcznie. 299 kr miesięcznie exkl. moms, bez okresu wiązania.',
-            'individual' => 'Więcej niż pięć stron, kilka lokalizacji albo dodatkowe funkcje. Wycena od 9 900 kr exkl. moms.',
+            'individual' => 'Więcej niż pięć stron, kilka lokalizacji albo dodatkowe funkcje. Od 9 900 kr, wycena indywidualna, exkl. moms.',
         ],
         'start' => [
             'price' => '4 900 kr',
@@ -106,11 +106,11 @@ return [
             ],
         ],
         'individual' => [
-            'price' => '9 900 kr',
-            'cadence' => 'od · exkl. moms',
+            'price' => 'od 9 900 kr',
+            'cadence' => 'wycena indywidualna · exkl. moms',
             'fit' => 'Gdy potrzeba więcej niż pięciu stron, kilku lokalizacji albo funkcji spoza pakietu Firma.',
             'points' => [
-                'Wycena po krótkiej rozmowie',
+                'Od 9 900 kr, wycena indywidualna',
                 'Stała cena, zanim zaczniemy',
             ],
         ],
@@ -129,7 +129,7 @@ return [
 
     'process' => [
         'title' => 'Jak to działa',
-        'intro' => 'Od krótkiej rozmowy do opublikowanej strony. Około dwóch tygodni, gdy materiały są już u nas.',
+        'intro' => 'Od krótkiej rozmowy do opublikowanej strony. Ok. 2 tygodnie, gdy materiały są już u nas.',
         'steps' => [
             [
                 'title' => 'Krótka rozmowa',
@@ -145,7 +145,7 @@ return [
             ],
             [
                 'title' => 'Materiały i realizacja',
-                'text' => 'Wysyłasz materiały. Budujemy stronę po polsku i szwedzku, około dwóch tygodni od ich otrzymania.',
+                'text' => 'Wysyłasz materiały. Budujemy stronę po polsku i szwedzku, ok. 2 tygodnie od ich otrzymania.',
             ],
             [
                 'title' => 'Publikacja',
@@ -193,7 +193,7 @@ return [
             ],
             [
                 'title' => 'Szybko',
-                'text' => 'Około dwóch tygodni od otrzymania materiałów.',
+                'text' => 'Ok. 2 tygodnie od otrzymania materiałów.',
             ],
             [
                 'title' => 'Bez pułapek',
@@ -270,11 +270,11 @@ return [
         'items' => [
             [
                 'q' => 'Ile to kosztuje?',
-                'a' => 'Start 4 900 kr, Firma 7 900 kr i Opieka 299 kr miesięcznie. Wszystko exkl. moms. Indywidualnie od 9 900 kr po wycenie.',
+                'a' => 'Start 4 900 kr, Firma 7 900 kr i Opieka 299 kr miesięcznie. Wszystko exkl. moms. Indywidualnie od 9 900 kr, wycena indywidualna.',
             ],
             [
                 'q' => 'Ile to trwa?',
-                'a' => 'Około dwóch tygodni od otrzymania materiałów.',
+                'a' => 'Ok. 2 tygodnie od otrzymania materiałów.',
             ],
             [
                 'q' => 'Kto jest właścicielem domeny?',
@@ -312,7 +312,7 @@ return [
     'contact' => [
         'title' => 'Poproś o wycenę',
         'lead' => 'Napisz krótko o firmie i o pakiecie, na który patrzysz. Filip odezwie się osobiście.',
-        'aside' => 'Start 4 900 kr, Firma 7 900 kr, Indywidualnie od 9 900 kr. Opieka 299 kr miesięcznie. Wszystko exkl. moms.',
+        'aside' => 'Start 4 900 kr, Firma 7 900 kr, Indywidualnie od 9 900 kr, wycena indywidualna. Opieka 299 kr miesięcznie. Wszystko exkl. moms.',
     ],
 
     'form' => [
@@ -329,12 +329,12 @@ return [
         'success' => 'Dziękujemy. Dostaliśmy zapytanie i odezwiemy się.',
         'throttled' => 'Za dużo zapytań w krótkim czasie. Odczekaj chwilę i spróbuj ponownie.',
         'privacy' => 'Dane służą tylko do odpowiedzi na zapytanie. Nie sprzedajemy ich.',
-        'privacy_link' => 'Więcej o prywatności',
+        'privacy_link' => 'Polityka prywatności',
         'package_options' => [
             'start' => 'Start — 4 900 kr',
             'firma' => 'Firma — 7 900 kr',
             'opieka' => 'Opieka — 299 kr/mies.',
-            'individual' => 'Indywidualnie — od 9 900 kr',
+            'individual' => 'Indywidualnie — od 9 900 kr, wycena indywidualna',
         ],
         'errors' => [
             'name_required' => 'Podaj imię i nazwisko.',
@@ -352,32 +352,36 @@ return [
     ],
 
     'privacy' => [
-        'title' => 'Prywatność',
-        'lead' => 'Formularz służy do proszenia o wycenę. Tak obchodzimy się z danymi.',
+        'title' => 'Polityka prywatności',
+        'lead' => 'Prodi AB używa danych, które podajesz, żeby odpowiedzieć na zapytanie o stronę. Tu jest, co zbieramy z formularza wyceny i z reklam leadowych Meta.',
         'sections' => [
             [
-                'title' => 'Co dostajemy',
-                'text' => 'Imię i nazwisko, firmę jeśli ją podasz, e-mail, telefon jeśli go podasz, wybrany pakiet, wiadomość i język, w którym wysłano formularz.',
+                'title' => 'Formularz wyceny',
+                'text' => 'Gdy wysyłasz formularz na tej stronie, dostajemy imię i nazwisko, firmę jeśli ją podasz, e-mail, telefon jeśli go podasz, wybrany pakiet, wiadomość i język formularza.',
             ],
             [
-                'title' => 'Po co',
-                'text' => 'Żeby odpowiedzieć na zapytanie. Danych nie sprzedajemy i nie używamy ich do innych wysyłek.',
+                'title' => 'Po co i gdzie trafiają',
+                'text' => 'Dane służą do odpowiedzi na zapytanie. Zapisujemy je w bazie Prodi i wysyłamy e-mailem do studia. Nie sprzedajemy ich i nie używamy do innych wysyłek.',
             ],
             [
-                'title' => 'Gdzie trafiają',
-                'text' => 'Do bazy Prodi i na e-mail studia. Adres skrzynki ustawia osoba, która prowadzi stronę.',
+                'title' => 'Reklamy leadowe Meta',
+                'text' => 'Jeśli wypełnisz formularz leadowy w reklamie na Facebooku lub Instagramie, Meta przekazuje dane do Prodi. Mogą to być imię i nazwisko, e-mail, telefon i inne pola, które sam wypełnisz. Traktujemy je tak samo jak formularz na stronie: żeby odpowiedzieć w sprawie strony internetowej. Danych nie sprzedajemy.',
             ],
             [
-                'title' => 'Dane firmy',
-                'text' => 'Numer organizacji i adres do korespondencji pojawią się tutaj, gdy będą znane. Do tego czasu nie ma ich na stronie.',
+                'title' => 'Jak długo i kontakt',
+                'text' => 'Zapytanie trzymamy tak długo, jak potrzeba do wyceny i związanego z nią kontaktu. Jeśli chcesz, żebyśmy usunęli dane, napisz przez formularz kontaktowy albo na adres e-mail w stopce.',
             ],
         ],
+        'company_title' => 'Dane firmy',
+        'org_line' => 'Prodi AB, org.nr :number, :city.',
+        'org_unpublished' => 'Numer organizacji pojawi się tutaj, gdy będzie uzupełniony.',
+        'address_unpublished' => 'Adres i kod pocztowy pojawią się tutaj, gdy będą uzupełnione. Do tego czasu nie ma ich na stronie.',
     ],
 
     'footer' => [
         'blurb' => 'Prodi robi dwujęzyczne strony dla małych firm. Filip Kostrzewski, Märsta.',
         'prices' => 'Ceny exkl. moms.',
-        'org_number' => 'Org.nr :number',
+        'org_number' => 'Prodi AB · org.nr :number',
         'rights' => 'Prodi',
     ],
 

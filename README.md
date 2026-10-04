@@ -49,14 +49,14 @@ Do not invent these. Leave them empty until they are known.
 
 | Variable | What to put |
 | --- | --- |
-| `PRODI_CONTACT_EMAIL` | Inbox that should receive quote requests. `you@example.com` is a placeholder and is not shown on the site. |
-| `PRODI_ORG_NUMBER` | Swedish organisation number. Hidden until set. |
-| `PRODI_STREET_ADDRESS` | Street address. Hidden until set. |
-| `PRODI_POSTAL_CODE` | Postal code. Hidden until set. |
-| `MAIL_FROM_ADDRESS` | From-address on outgoing mail, once a mailbox exists. |
+| `PRODI_CONTACT_EMAIL` | `filip@prodi.se`. Quote requests are emailed here. An address at example.com, example.org or example.net is not shown on the site. |
+| `PRODI_ORG_NUMBER` | `559214-9370`. Prodi is an AB. Shown in the footer and on the privacy policy. |
+| `PRODI_STREET_ADDRESS` | Street address. Still unknown. Hidden until set. |
+| `PRODI_POSTAL_CODE` | Postal code. Still unknown. Hidden until set. |
+| `MAIL_FROM_ADDRESS` | `filip@prodi.se`. |
 | `APP_URL` | `http://prodi.test` locally, `https://prodi.se` in production. |
 
-`PRODI_NAME`, `PRODI_OWNER` and `PRODI_CITY` already match the studio. Prices are exkl. moms: Start 4 900 kr, Firma 7 900 kr, Opieka 299 kr/month, Individuellt from 9 900 kr.
+`PRODI_NAME`, `PRODI_OWNER` and `PRODI_CITY` already match the studio. Prices are exkl. moms: Start 4 900 kr, Firma 7 900 kr, Opieka 299 kr/month, Individuellt from 9 900 kr, individual quote.
 
 ## Add another language
 
@@ -76,7 +76,30 @@ npm ci
 npm run build
 ```
 
-On the server, with a production `.env` (`APP_ENV=production`, `APP_DEBUG=false`, `APP_URL=https://prodi.se`):
+Production `.env` for [prodi.se](https://prodi.se):
+
+```dotenv
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://prodi.se
+
+MAIL_MAILER=smtp
+MAIL_HOST=
+MAIL_PORT=587
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM_ADDRESS=filip@prodi.se
+MAIL_FROM_NAME=Prodi
+
+PRODI_CONTACT_EMAIL=filip@prodi.se
+PRODI_ORG_NUMBER=559214-9370
+PRODI_STREET_ADDRESS=
+PRODI_POSTAL_CODE=
+
+QUEUE_CONNECTION=sync
+```
+
+Fill `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME` and `MAIL_PASSWORD` with the SMTP settings for `filip@prodi.se`. Leave street and postal code empty. Quote mail is sent inside the web request (`ContactInquiryReceived` is not queued), so `QUEUE_CONNECTION=sync` is enough and no queue worker is required.
 
 ```bash
 php artisan migrate --force
@@ -85,7 +108,7 @@ php artisan route:cache
 php artisan view:cache
 ```
 
-`storage/` and `bootstrap/cache/` must be writable by PHP. Quote mail is sent during the request, so a queue worker is not required. Point `MAIL_MAILER` at the real mailer when the mailbox exists, and set `PRODI_CONTACT_EMAIL`.
+`storage/` and `bootstrap/cache/` must be writable by PHP.
 
 SQLite is enough to start (`DB_CONNECTION=sqlite`). MySQL or MariaDB works too: set `DB_CONNECTION=mysql` and the `DB_*` values, create the database, then migrate.
 
@@ -100,9 +123,38 @@ Prefer a host that lets you set the document root to `public/`. If the document 
 
 Do not leave `.env` inside the public document root.
 
-### VPS
+### Production VPS
 
-A typical setup is Nginx, PHP 8.3-FPM and HTTPS:
+The live site runs on a VPS at `70.34.219.109`, with GitHub autodeploy, and Cloudflare in front of the origin.
+
+DNS for `prodi.se` and `www.prodi.se` is proxied (orange cloud) to `70.34.219.109`. Use SSL mode **Full (strict)** and Always Use HTTPS. `APP_URL` must be `https://prodi.se`, including the scheme. Sitemap and canonical URLs are built from `APP_URL`. Redirect `www` to the apex and keep both names on that same `APP_URL`.
+
+`bootstrap/app.php` calls `trustProxies(at: '*')`. Cloudflare sends `X-Forwarded-For` and `X-Forwarded-Proto`, and Laravel uses those so `$request->ip()` is the visitor, not a Cloudflare address. The quote form rate limit keys on that IP. Trusting every proxy is safe only while the origin firewall allows ports 80 and 443 from [Cloudflare’s IP ranges](https://www.cloudflare.com/ips/) and from nowhere else. If the origin is open to the whole internet, a client can spoof `X-Forwarded-For`.
+
+The app does not ship a static `public/robots.txt`. `/sitemap.xml` and `/robots.txt` are Laravel routes, so the document root must fall through to `index.php`.
+
+Privacy policy URLs for Meta lead ads:
+
+- Swedish: `https://prodi.se/integritetspolicy`
+- Polish: `https://prodi.se/pl/polityka-prywatnosci`
+
+The policy names Prodi AB, org.nr `559214-9370`, and covers the quote form and Meta lead forms. Street address and postal code stay off the page until `PRODI_STREET_ADDRESS` and `PRODI_POSTAL_CODE` are set.
+
+On each push, the autodeploy hook on the VPS should run from the project directory:
+
+```bash
+git pull --ff-only
+composer install --no-dev --optimize-autoloader
+npm ci
+npm run build
+php artisan migrate --force
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+sudo systemctl reload php8.3-fpm
+```
+
+Nginx, PHP 8.3-FPM and the origin certificate (Full strict needs a certificate on the VPS, for example from Certbot or a Cloudflare origin certificate):
 
 ```nginx
 server {
@@ -130,6 +182,4 @@ server {
 }
 ```
 
-Redirect `www` to the apex (or the other way around) and point both names at the same `APP_URL`. Certbot or Caddy can issue the certificate. There is no queue worker, scheduler or websocket to keep running for this site.
-
-`/sitemap.xml` and `/robots.txt` are generated by the app from `APP_URL`. There is no static `public/robots.txt`; the document root must fall through to `index.php` for those paths.
+There is no queue worker, scheduler or websocket to keep running.

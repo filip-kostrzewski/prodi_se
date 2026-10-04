@@ -4,11 +4,11 @@ return [
 
     'meta' => [
         'home_title' => 'Prodi — tvåspråkiga hemsidor för småföretag',
-        'home_description' => 'Tvåspråkig hemsida på polska och svenska, Google Business-profil och kontaktformulär. Klart på ungefär två veckor, från 4 900 kr exkl. moms. Prodi i Märsta.',
+        'home_description' => 'Tvåspråkig hemsida på svenska och polska, Google-företagsprofil och kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms. Prodi i Märsta.',
         'contact_title' => 'Begär offert — Prodi',
         'contact_description' => 'Berätta om firman och vilket paket du tittar på. Filip återkommer personligen. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
-        'privacy_title' => 'Integritet — Prodi',
-        'privacy_description' => 'Så använder Prodi uppgifterna du skickar i offertformuläret.',
+        'privacy_title' => 'Integritetspolicy — Prodi',
+        'privacy_description' => 'Så hanterar Prodi AB uppgifter från offertformuläret och från lead-annonser på Meta.',
         'cleaning_title' => 'Exempeldesign: städfirma — Prodi',
         'cleaning_description' => 'Exempel på en ensidig hemsida för en städfirma. En exempeldesign från Prodi, inte en riktig kund.',
         'painting_description' => 'Exempel på en hemsida med flera undersidor för en målerifirma. En exempeldesign från Prodi, inte en riktig kund.',
@@ -31,13 +31,13 @@ return [
         'examples' => 'Exempel',
         'faq' => 'Frågor',
         'contact' => 'Kontakt',
-        'privacy' => 'Integritet',
+        'privacy' => 'Integritetspolicy',
     ],
 
     'hero' => [
         'eyebrow' => 'Webbyrå i Märsta · polska och svenska',
-        'title' => 'En tvåspråkig hemsida för ditt företag. Klar på ungefär två veckor.',
-        'lead' => 'Jag bygger en tvåspråkig hemsida på polska och svenska åt ditt företag, fixar Google Business-profilen och ett kontaktformulär – klart på ungefär två veckor, från 4 900 kr exkl. moms.',
+        'title' => 'En tvåspråkig hemsida för ditt företag. Klar på cirka två veckor.',
+        'lead' => 'Vi bygger en tvåspråkig hemsida på svenska och polska åt ditt företag, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.',
         'primary' => 'Begär offert',
         'secondary' => 'Se paketen',
         'price_from' => 'från',
@@ -46,7 +46,7 @@ return [
         'facts' => [
             'Leverans cirka två veckor från att materialet är inne',
             'Du äger din domän',
-            'Google Business-profil och kontaktformulär ingår',
+            'Google-företagsprofil och kontaktformulär ingår',
         ],
     ],
 
@@ -77,10 +77,10 @@ return [
             'individual' => 'Individuellt',
         ],
         'schema' => [
-            'start' => 'En sida på polska och svenska, mobil, kontaktformulär, Google Business-profil och grundläggande SEO. 4 900 kr exkl. moms.',
-            'firma' => 'Upp till fem undersidor på polska och svenska, Google Business-profil och lokal SEO. 7 900 kr exkl. moms.',
+            'start' => 'En sida på polska och svenska, mobil, kontaktformulär, Google-företagsprofil och grundläggande SEO. 4 900 kr exkl. moms.',
+            'firma' => 'Upp till fem undersidor på polska och svenska, Google-företagsprofil och lokal SEO. 7 900 kr exkl. moms.',
             'opieka' => 'Hosting, SSL, säkerhetskopior och små textändringar upp till 30 minuter per månad. 299 kr per månad exkl. moms, utan bindningstid.',
-            'individual' => 'Fler än fem sidor, flera orter eller extra funktioner. Offert från 9 900 kr exkl. moms.',
+            'individual' => 'Fler än fem sidor, flera orter eller extra funktioner. Från 9 900 kr, individuell offert, exkl. moms.',
         ],
         'start' => [
             'price' => '4 900 kr',
@@ -90,7 +90,7 @@ return [
                 'En sida på polska och svenska',
                 'Anpassad för mobil',
                 'Kontaktformulär',
-                'Google Business-profil',
+                'Google-företagsprofil',
                 'Grundläggande SEO',
             ],
         ],
@@ -101,16 +101,16 @@ return [
             'points' => [
                 'Upp till fem undersidor, till exempel tjänster, galleri och kontakt',
                 'Polska och svenska',
-                'Google Business-profil',
+                'Google-företagsprofil',
                 'Lokal SEO',
             ],
         ],
         'individual' => [
-            'price' => '9 900 kr',
-            'cadence' => 'från · exkl. moms',
+            'price' => 'från 9 900 kr',
+            'cadence' => 'individuell offert · exkl. moms',
             'fit' => 'För fler än fem sidor, flera orter eller funktioner som inte ryms i Firma.',
             'points' => [
-                'Offert efter en kort genomgång',
+                'Från 9 900 kr, individuell offert',
                 'Fast pris innan vi börjar',
             ],
         ],
@@ -129,7 +129,7 @@ return [
 
     'process' => [
         'title' => 'Så går det till',
-        'intro' => 'Från ett kort samtal till en publicerad sida. Ungefär två veckor när materialet är inne.',
+        'intro' => 'Från ett kort samtal till en publicerad sida. Cirka två veckor när materialet är inne.',
         'steps' => [
             [
                 'title' => 'Ett kort samtal',
@@ -145,11 +145,11 @@ return [
             ],
             [
                 'title' => 'Material och bygge',
-                'text' => 'Du skickar underlag. Vi bygger sidan på polska och svenska, ungefär två veckor från att materialet är inne.',
+                'text' => 'Du skickar underlag. Vi bygger sidan på polska och svenska, cirka två veckor från att materialet är inne.',
             ],
             [
                 'title' => 'Publicering',
-                'text' => 'Justeringar, domän, sidan live och Google Business-profilen på plats.',
+                'text' => 'Justeringar, domän, sidan live och Google-företagsprofilen på plats.',
             ],
             [
                 'title' => 'Opieka om du vill',
@@ -167,7 +167,7 @@ return [
             'Bilder på jobb, butik eller team — eller ett ja till bilder från Facebook eller Google',
             'En kort beskrivning på polska. Den svenska texten skriver vi',
             'Tillgång till nuvarande domän, eller ett ja till att registrera en ny i ditt namn',
-            'Tillgång till ett Google-konto för företagsprofilen, eller ett ja till att vi skapar profilen',
+            'Tillgång till ett Google-konto för Google-företagsprofilen, eller ett ja till att vi skapar den',
             'En person som godkänner utkastet',
         ],
     ],
@@ -188,12 +188,12 @@ return [
                 'text' => 'Start 4 900 kr och Firma 7 900 kr, exkl. moms. Under det som är vanligt hos många byråer för samma typ av sida.',
             ],
             [
-                'title' => 'Google-profilen ingår',
+                'title' => 'Google-företagsprofilen ingår',
                 'text' => 'Kunderna hittar dig i Google och på kartan, inte bara på Facebook. Kontaktformuläret ingår också.',
             ],
             [
                 'title' => 'Snabbt',
-                'text' => 'Ungefär två veckor från att materialet kommit in.',
+                'text' => 'Cirka två veckor från att materialet kommit in.',
             ],
             [
                 'title' => 'Utan fällor',
@@ -270,11 +270,11 @@ return [
         'items' => [
             [
                 'q' => 'Vad kostar det?',
-                'a' => 'Start 4 900 kr, Firma 7 900 kr och Opieka 299 kr per månad. Allt exkl. moms. Individuellt från 9 900 kr efter offert.',
+                'a' => 'Start 4 900 kr, Firma 7 900 kr och Opieka 299 kr per månad. Allt exkl. moms. Individuellt från 9 900 kr, individuell offert.',
             ],
             [
                 'q' => 'Hur lång tid tar det?',
-                'a' => 'Ungefär två veckor från att vi har materialet.',
+                'a' => 'Cirka två veckor från att vi har materialet.',
             ],
             [
                 'q' => 'Vem äger domänen?',
@@ -290,7 +290,7 @@ return [
             ],
             [
                 'q' => 'Vad behöver jag skicka?',
-                'a' => 'Namn, kontaktuppgifter, tjänster, bilder om du har, en kort text på polska och ett ja till domän och Google-profil. Den svenska texten skriver vi.',
+                'a' => 'Namn, kontaktuppgifter, tjänster, bilder om du har, en kort text på polska och ett ja till domän och Google-företagsprofil. Den svenska texten skriver vi.',
             ],
             [
                 'q' => 'Kan vi ses?',
@@ -312,7 +312,7 @@ return [
     'contact' => [
         'title' => 'Begär offert',
         'lead' => 'Berätta kort om firman och vilket paket du tittar på. Filip återkommer personligen.',
-        'aside' => 'Start 4 900 kr, Firma 7 900 kr, Individuellt från 9 900 kr. Opieka 299 kr per månad. Allt exkl. moms.',
+        'aside' => 'Start 4 900 kr, Firma 7 900 kr, Individuellt från 9 900 kr, individuell offert. Opieka 299 kr per månad. Allt exkl. moms.',
     ],
 
     'form' => [
@@ -329,12 +329,12 @@ return [
         'success' => 'Tack. Vi har tagit emot din förfrågan och återkommer.',
         'throttled' => 'För många förfrågningar just nu. Vänta en stund och försök igen.',
         'privacy' => 'Uppgifterna används bara för att svara på din förfrågan. Vi säljer dem inte vidare.',
-        'privacy_link' => 'Läs mer om integritet',
+        'privacy_link' => 'Läs integritetspolicyn',
         'package_options' => [
             'start' => 'Start — 4 900 kr',
             'firma' => 'Firma — 7 900 kr',
             'opieka' => 'Opieka — 299 kr/mån',
-            'individual' => 'Individuellt — från 9 900 kr',
+            'individual' => 'Individuellt — från 9 900 kr, individuell offert',
         ],
         'errors' => [
             'name_required' => 'Fyll i ditt namn.',
@@ -352,32 +352,36 @@ return [
     ],
 
     'privacy' => [
-        'title' => 'Integritet',
-        'lead' => 'Formuläret finns för att du ska kunna be om en offert. Det här är vad som händer med uppgifterna.',
+        'title' => 'Integritetspolicy',
+        'lead' => 'Prodi AB använder uppgifterna du lämnar för att kunna svara på en förfrågan om hemsida. Här står vad som samlas in, från offertformuläret och från lead-annonser på Meta.',
         'sections' => [
             [
-                'title' => 'Vad vi tar emot',
-                'text' => 'Namn, företag om du anger det, e-post, telefon om du anger den, valt paket, meddelande och vilket språk formuläret skickades på.',
+                'title' => 'Offertformuläret',
+                'text' => 'När du skickar formuläret på den här webbplatsen tar vi emot namn, företag om du anger det, e-post, telefon om du anger den, valt paket, meddelande och vilket språk formuläret skickades på.',
             ],
             [
-                'title' => 'Varför',
-                'text' => 'För att svara på förfrågan. Uppgifterna säljs inte och används inte till något annat utskick.',
+                'title' => 'Varför och var de hamnar',
+                'text' => 'Uppgifterna används för att svara på förfrågan. De sparas i Prodis databas och skickas med e-post till studion. Vi säljer dem inte och använder dem inte till annat utskick.',
             ],
             [
-                'title' => 'Var de hamnar',
-                'text' => 'I Prodis databas och i ett e-postmeddelande till studion. Adressen till inkorgen sätts av den som driver sidan.',
+                'title' => 'Lead-annonser på Meta',
+                'text' => 'Om du fyller i ett lead-formulär i en annons på Facebook eller Instagram skickar Meta uppgifterna till Prodi. Det kan vara namn, e-post, telefon och andra fält du själv fyller i. Vi behandlar dem på samma sätt som formuläret på webbplatsen: för att svara om en hemsida. Vi säljer inte uppgifterna.',
             ],
             [
-                'title' => 'Företagsuppgifter',
-                'text' => 'Organisationsnummer och besöksadress publiceras här när de är klara. Tills dess står de inte på sidan.',
+                'title' => 'Lagring och kontakt',
+                'text' => 'Vi sparar förfrågan så länge den behövs för offerten och den uppföljning som hör till den. Vill du att uppgifterna tas bort, hör av dig via kontaktformuläret eller till e-postadressen i sidfoten.',
             ],
         ],
+        'company_title' => 'Företagsuppgifter',
+        'org_line' => 'Prodi AB, org.nr :number, :city.',
+        'org_unpublished' => 'Organisationsnumret publiceras här när det är ifyllt.',
+        'address_unpublished' => 'Besöksadress och postnummer publiceras här när de är ifyllda. Tills dess står de inte på sidan.',
     ],
 
     'footer' => [
         'blurb' => 'Prodi gör tvåspråkiga hemsidor för småföretag. Filip Kostrzewski, Märsta.',
         'prices' => 'Priser exkl. moms.',
-        'org_number' => 'Org.nr :number',
+        'org_number' => 'Prodi AB · org.nr :number',
         'rights' => 'Prodi',
     ],
 

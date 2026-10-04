@@ -15,6 +15,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // The origin only receives public traffic through Cloudflare.
+        // Trust the forwarded client IP so the quote form rate limit
+        // is per visitor. Keep ports 80 and 443 closed to everyone else.
+        $middleware->trustProxies(at: '*');
+
         $middleware->alias([
             'locale' => SetLocale::class,
             'honeypot' => DiscardFilledHoneypot::class,
