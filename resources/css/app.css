@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+    --font-serif: var(--font-fraunces), ui-serif, Georgia, 'Times New Roman', serif;
+    --color-paper: #f3efe6;
+    --color-ink: #1c1915;
+    --color-pine: #14372b;
+    --color-pine-deep: #0d2820;
+    --color-mist: #e7f2eb;
+    --color-clay: #9a3d1c;
+    --color-line: #ddd4c6;
+    --color-muted: #4a453e;
+    --color-card: #fffdf8;
+    --color-ex-bg: #f3faf6;
+    --color-ex-ink: #12241e;
+    --color-ex-accent: #1c6b58;
+    --color-ex-card: #ffffff;
+    --color-ex-line: #d3e3db;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    summary {
+        list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-pine);
+        outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+}
+
+[data-theme='painting'] {
+    --color-ex-bg: #f6f1e8;
+    --color-ex-ink: #261b13;
+    --color-ex-accent: #8d4320;
+    --color-ex-card: #fffdf8;
+    --color-ex-line: #e3d5c4;
+}
