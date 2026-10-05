@@ -32,8 +32,8 @@
 
         <header class="sticky top-0 z-40 border-b border-line/80 bg-paper/90 backdrop-blur-md">
             <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-                <a href="{{ $home }}" class="inline-flex shrink-0">
-                    <img src="{{ asset('images/prodi-logo.png') }}" alt="Prodi" width="160" height="225" class="h-14 w-auto sm:h-16">
+                <a href="{{ $home }}" class="inline-flex shrink-0 items-center" aria-label="Prodi">
+                    <x-brand />
                 </a>
 
                 <nav aria-label="{{ __('site.a11y.primary') }}" class="hidden items-center gap-6 text-sm text-muted md:flex">
@@ -92,8 +92,8 @@
         <footer class="border-t border-line">
             <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-[1.4fr_1fr]">
                 <div class="flex flex-col gap-3">
-                    <a href="{{ $home }}" class="inline-flex w-fit">
-                        <img src="{{ asset('images/prodi-logo.png') }}" alt="Prodi" width="160" height="225" class="h-24 w-auto">
+                    <a href="{{ $home }}" class="inline-flex w-fit items-center" aria-label="Prodi">
+                        <x-brand size="lg" />
                     </a>
                     <p class="max-w-md text-sm leading-6 text-muted">{{ __('site.footer.blurb') }}</p>
                     <p class="text-sm text-muted">{{ __('site.footer.prices') }}</p>

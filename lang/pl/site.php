@@ -3,10 +3,10 @@
 return [
 
     'meta' => [
-        'home_title' => 'Prodi — dwujęzyczne strony dla małych firm',
-        'home_description' => 'Dwujęzyczna strona PL/SV, profil Google Business i formularz kontaktowy. Gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms. Prodi w Märsta.',
+        'home_title' => 'Prodi — strony dla firm',
+        'home_description' => 'Strony po szwedzku, po polsku i w innych językach, kiedy trzeba. Profil Google Business i formularz. Gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms. Prodi w Märsta.',
         'contact_title' => 'Poproś o wycenę — Prodi',
-        'contact_description' => 'Napisz krótko o firmie i o pakiecie. Filip odezwie się osobiście. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
+        'contact_description' => 'Napisz krótko o firmie i o pakiecie. Odezwę się osobiście. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
         'privacy_title' => 'Polityka prywatności — Prodi',
         'privacy_description' => 'Jak Prodi AB przetwarza dane z formularza wyceny i z reklam leadowych Meta.',
         'cleaning_title' => 'Przykładowy projekt: firma sprzątająca — Prodi',
@@ -35,9 +35,9 @@ return [
     ],
 
     'hero' => [
-        'eyebrow' => 'Studio stron www w Märsta · po polsku i po szwedzku',
-        'title' => 'Dwujęzyczna strona dla Twojej firmy. Gotowa w ok. 2 tygodnie.',
-        'lead' => 'Zrobię Ci dwujęzyczną stronę PL/SV, ustawię Google Business Profile i formularz kontaktowy — gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms.',
+        'eyebrow' => 'Studio stron www w Märsta',
+        'title' => 'Strona dla Twojej firmy. Gotowa w ok. 2 tygodnie.',
+        'lead' => 'Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba. Ustawię Google Business Profile i formularz kontaktowy — gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms.',
         'primary' => 'Poproś o wycenę',
         'secondary' => 'Zobacz pakiety',
         'price_from' => 'od',
@@ -51,8 +51,8 @@ return [
     ],
 
     'audience' => [
-        'label' => 'Dla małych firm',
-        'text' => 'Bez strony, ze stroną, która nie działa, albo tylko z Facebookiem. W pierwszej kolejności polskie firmy w Szwecji, a także inne małe firmy.',
+        'label' => 'Dla firm',
+        'text' => 'Bez strony, ze stroną, która nie działa, albo tylko z Facebookiem. Sklep, sprzątanie, warsztat i inne działalności. Po szwedzku, po polsku i w innych językach, kiedy trzeba.',
         'trades' => [
             'Budowa i remonty',
             'Sprzątanie',
@@ -78,8 +78,8 @@ return [
             'individual' => 'Indywidualnie',
         ],
         'schema' => [
-            'start' => 'Jedna strona po polsku i szwedzku, mobile, formularz kontaktowy, Google Business Profile i podstawowe SEO. 4 900 kr exkl. moms.',
-            'firma' => 'Do pięciu podstron po polsku i szwedzku, Google Business Profile i lokalne SEO. 7 900 kr exkl. moms.',
+            'start' => 'Jedna strona po szwedzku, po polsku i w innych językach, kiedy trzeba. Wersja mobilna, formularz kontaktowy, Google Business Profile i podstawowe SEO. 4 900 kr exkl. moms.',
+            'firma' => 'Do pięciu podstron, Google Business Profile i lokalne SEO. Kolejne języki, kiedy trzeba. 7 900 kr exkl. moms.',
             'opieka' => 'Hosting, SSL, kopie zapasowe i drobne zmiany treści do 30 minut miesięcznie. 299 kr miesięcznie exkl. moms, bez okresu wiązania.',
             'individual' => 'Więcej niż pięć stron, kilka lokalizacji albo dodatkowe funkcje. Od 9 900 kr, wycena indywidualna, exkl. moms.',
         ],
@@ -88,7 +88,7 @@ return [
             'cadence' => 'jednorazowo · exkl. moms',
             'fit' => 'Dla firmy, której wystarczy wizytówka: sklep, fryzjer, mechanik.',
             'points' => [
-                'Jedna strona po polsku i szwedzku',
+                'Po szwedzku, po polsku i w innych językach, kiedy trzeba',
                 'Działa na telefonie',
                 'Formularz kontaktowy',
                 'Google Business Profile',
@@ -101,7 +101,7 @@ return [
             'fit' => 'Dla firmy usługowej z realizacjami, na przykład malarza lub ekipy remontowej, albo kilku sklepów.',
             'points' => [
                 'Do pięciu podstron, na przykład usługi, galeria i kontakt',
-                'Po polsku i po szwedzku',
+                'Po szwedzku, po polsku i w innych językach, kiedy trzeba',
                 'Google Business Profile',
                 'Lokalne SEO',
             ],
@@ -146,7 +146,7 @@ return [
             ],
             [
                 'title' => 'Materiały i realizacja',
-                'text' => 'Wysyłasz materiały. Zbuduję stronę po polsku i szwedzku, ok. 2 tygodnie od ich otrzymania.',
+                'text' => 'Wysyłasz materiały. Zbuduję stronę po szwedzku, po polsku i w innych językach, kiedy trzeba. Ok. 2 tygodnie od ich otrzymania.',
             ],
             [
                 'title' => 'Publikacja',
@@ -166,7 +166,7 @@ return [
             'Nazwa firmy, logo jeśli jest, dane kontaktowe, adres i godziny otwarcia',
             'Lista usług albo asortyment, ewentualnie orientacyjne ceny',
             'Zdjęcia realizacji, sklepu albo zespołu — albo zgoda na zdjęcia z Facebooka lub Google',
-            'Krótki opis firmy po polsku. Wersję szwedzką napiszę ja',
+            'Krótki opis firmy. Napiszę tekst po szwedzku, po polsku i w innych językach, kiedy trzeba',
             'Dostęp do obecnej domeny albo zgoda na rejestrację nowej na Ciebie',
             'Dostęp do konta Google pod profil firmy albo zgoda, żebym założył profil',
             'Jedna osoba, która akceptuje projekt',
@@ -177,8 +177,8 @@ return [
         'title' => 'Dlaczego Prodi',
         'items' => [
             [
-                'title' => 'Po polsku i po szwedzku',
-                'text' => 'Z Filipem dogadasz się po polsku. Strona jest też po szwedzku, żeby znaleźli Cię lokalni klienci.',
+                'title' => 'Więcej niż dwa języki',
+                'text' => 'Strona po szwedzku, żeby znaleźli Cię lokalni klienci. Po polsku i w innych językach, kiedy trzeba.',
             ],
             [
                 'title' => 'Lokalnie',
@@ -383,13 +383,13 @@ return [
 
     'closing' => [
         'title' => 'Napisz, jeśli chcesz stronę.',
-        'text' => 'Kilka zdań o firmie wystarczy. Filip odezwie się osobiście.',
+        'text' => 'Kilka zdań o firmie wystarczy. Odezwę się osobiście.',
         'button' => 'Poproś o wycenę',
     ],
 
     'contact' => [
         'title' => 'Poproś o wycenę',
-        'lead' => 'Napisz krótko o firmie i o pakiecie, na który patrzysz. Filip odezwie się osobiście.',
+        'lead' => 'Napisz krótko o firmie i o pakiecie, na który patrzysz. Odezwę się osobiście.',
         'aside' => 'Start 4 900 kr, Firma 7 900 kr, Indywidualnie od 9 900 kr, wycena indywidualna. Opieka 299 kr miesięcznie. Wszystko exkl. moms.',
     ],
 
@@ -459,7 +459,7 @@ return [
     ],
 
     'footer' => [
-        'blurb' => 'Prodi robi dwujęzyczne strony dla małych firm. Filip Kostrzewski, Märsta.',
+        'blurb' => 'Prodi robi strony dla firm. Po szwedzku, po polsku i w innych językach, kiedy trzeba.',
         'prices' => 'Ceny exkl. moms.',
         'org_number' => 'Prodi AB · org.nr :number',
         'rights' => 'Prodi',

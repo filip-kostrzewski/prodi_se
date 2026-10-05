@@ -3,10 +3,10 @@
 return [
 
     'meta' => [
-        'home_title' => 'Prodi — tvåspråkiga hemsidor för småföretag',
-        'home_description' => 'Tvåspråkig hemsida på svenska och polska, Google-företagsprofil och kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms. Prodi i Märsta.',
+        'home_title' => 'Prodi — hemsidor för företag',
+        'home_description' => 'Hemsidor på svenska, polska och fler språk när det behövs. Google-företagsprofil och kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms. Prodi i Märsta.',
         'contact_title' => 'Begär offert — Prodi',
-        'contact_description' => 'Berätta om firman och vilket paket du tittar på. Filip återkommer personligen. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
+        'contact_description' => 'Berätta om firman och vilket paket du tittar på. Vi återkommer personligen. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
         'privacy_title' => 'Integritetspolicy — Prodi',
         'privacy_description' => 'Så hanterar Prodi AB uppgifter från offertformuläret och från lead-annonser på Meta.',
         'cleaning_title' => 'Exempeldesign: städfirma — Prodi',
@@ -35,9 +35,9 @@ return [
     ],
 
     'hero' => [
-        'eyebrow' => 'Webbyrå i Märsta · för småföretag',
-        'title' => 'En tvåspråkig hemsida för ditt företag. Klar på cirka två veckor.',
-        'lead' => 'Vi bygger en tvåspråkig hemsida på svenska och polska åt ditt företag, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.',
+        'eyebrow' => 'Webbyrå i Märsta',
+        'title' => 'En hemsida för ditt företag. Klar på cirka två veckor.',
+        'lead' => 'Vi bygger en hemsida åt ditt företag, på svenska, polska och fler språk när det behövs, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.',
         'primary' => 'Begär offert',
         'secondary' => 'Se paketen',
         'price_from' => 'från',
@@ -51,8 +51,8 @@ return [
     ],
 
     'audience' => [
-        'label' => 'För småföretag',
-        'text' => 'För småföretag utan sida, med en sida som inte jobbar, eller som bara finns på Facebook. Bygg, städ, verkstad, butik och andra firmor. Polska är en styrka när det passar, inte ett krav.',
+        'label' => 'För företag',
+        'text' => 'Utan sida, med en sida som inte jobbar, eller som bara finns på Facebook. Bygg, städ, verkstad, butik och andra verksamheter. Svenska, polska och fler språk när det behövs.',
         'trades' => [
             'Bygg och renovering',
             'Städ',
@@ -78,8 +78,8 @@ return [
             'individual' => 'Individuellt',
         ],
         'schema' => [
-            'start' => 'En sida på polska och svenska, mobil, kontaktformulär, Google-företagsprofil och grundläggande SEO. 4 900 kr exkl. moms.',
-            'firma' => 'Upp till fem undersidor på polska och svenska, Google-företagsprofil och lokal SEO. 7 900 kr exkl. moms.',
+            'start' => 'En sida på svenska, polska och fler språk när det behövs, mobil, kontaktformulär, Google-företagsprofil och grundläggande SEO. 4 900 kr exkl. moms.',
+            'firma' => 'Upp till fem undersidor, Google-företagsprofil och lokal SEO. Fler språk när det behövs. 7 900 kr exkl. moms.',
             'opieka' => 'Hosting, SSL, säkerhetskopior och små textändringar upp till 30 minuter per månad. 299 kr per månad exkl. moms, utan bindningstid.',
             'individual' => 'Fler än fem sidor, flera orter eller extra funktioner. Från 9 900 kr, individuell offert, exkl. moms.',
         ],
@@ -88,7 +88,7 @@ return [
             'cadence' => 'engång · exkl. moms',
             'fit' => 'För en firma som räcker med ett visitkort på nätet: butik, frisör, verkstad.',
             'points' => [
-                'En sida på polska och svenska',
+                'Svenska, polska och fler språk när det behövs',
                 'Anpassad för mobil',
                 'Kontaktformulär',
                 'Google-företagsprofil',
@@ -101,7 +101,7 @@ return [
             'fit' => 'För en tjänstefirma med jobb att visa, till exempel målare eller renovering, eller några butiker.',
             'points' => [
                 'Upp till fem undersidor, till exempel tjänster, galleri och kontakt',
-                'Polska och svenska',
+                'Svenska, polska och fler språk när det behövs',
                 'Google-företagsprofil',
                 'Lokal SEO',
             ],
@@ -146,7 +146,7 @@ return [
             ],
             [
                 'title' => 'Material och bygge',
-                'text' => 'Du skickar underlag. Vi bygger sidan på polska och svenska, cirka två veckor från att materialet är inne.',
+                'text' => 'Du skickar underlag. Vi bygger sidan på svenska, polska och fler språk när det behövs, cirka två veckor från att materialet är inne.',
             ],
             [
                 'title' => 'Publicering',
@@ -166,7 +166,7 @@ return [
             'Företagsnamn, logotyp om du har en, kontaktuppgifter, adress och öppettider',
             'Tjänster eller sortiment, gärna med ungefärliga priser',
             'Bilder på jobb, butik eller team — eller ett ja till bilder från Facebook eller Google',
-            'En kort beskrivning på polska. Den svenska texten skriver vi',
+            'En kort beskrivning av firman. Vi skriver texten på svenska, polska och fler språk när det behövs',
             'Tillgång till nuvarande domän, eller ett ja till att registrera en ny i ditt namn',
             'Tillgång till ett Google-konto för Google-företagsprofilen, eller ett ja till att vi skapar den',
             'En person som godkänner utkastet',
@@ -177,12 +177,12 @@ return [
         'title' => 'Varför Prodi',
         'items' => [
             [
-                'title' => 'På svenska, och på polska',
-                'text' => 'Sidan görs på svenska så lokala kunder hittar dig. Går det lättare på polska tar Filip jobbet på polska också.',
+                'title' => 'Flera språk',
+                'text' => 'Sidan görs på svenska så lokala kunder hittar dig. Polska och fler språk när det behövs.',
             ],
             [
                 'title' => 'Lokalt',
-                'text' => 'Filip finns i Märsta, nära Stockholm och Uppsala. Vi kan ta en kaffe.',
+                'text' => 'Vi finns i Märsta, nära Stockholm och Uppsala. Vi kan ta en kaffe.',
             ],
             [
                 'title' => 'Fasta priser',
@@ -383,13 +383,13 @@ return [
 
     'closing' => [
         'title' => 'Säg till om du vill ha en sida.',
-        'text' => 'Skriv några rader om firman. Filip återkommer personligen.',
+        'text' => 'Skriv några rader om firman. Vi återkommer personligen.',
         'button' => 'Begär offert',
     ],
 
     'contact' => [
         'title' => 'Begär offert',
-        'lead' => 'Berätta kort om firman och vilket paket du tittar på. Filip återkommer personligen.',
+        'lead' => 'Berätta kort om firman och vilket paket du tittar på. Vi återkommer personligen.',
         'aside' => 'Start 4 900 kr, Firma 7 900 kr, Individuellt från 9 900 kr, individuell offert. Skötsel 299 kr per månad. Allt exkl. moms.',
     ],
 
@@ -427,7 +427,7 @@ return [
             'package_invalid' => 'Välj ett av paketen i listan.',
             'message_required' => 'Skriv ett kort meddelande.',
             'message_max' => 'Meddelandet får vara högst 5 000 tecken.',
-            'mail_failed' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till :email så tar Filip det därifrån.',
+            'mail_failed' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till :email så tar vi det därifrån.',
         ],
     ],
 
@@ -459,7 +459,7 @@ return [
     ],
 
     'footer' => [
-        'blurb' => 'Prodi gör tvåspråkiga hemsidor för småföretag. Filip Kostrzewski, Märsta.',
+        'blurb' => 'Prodi bygger hemsidor för företag. Svenska, polska och fler språk när det behövs.',
         'prices' => 'Priser exkl. moms.',
         'org_number' => 'Prodi AB · org.nr :number',
         'rights' => 'Prodi',

@@ -39,7 +39,11 @@ class PageControllerTest extends TestCase
         $response = $this->get('/');
 
         $response->assertSee('<html lang="sv"', false);
-        $response->assertSee('Vi bygger en tvåspråkig hemsida på svenska och polska åt ditt företag, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.', false);
+        $response->assertSee('Vi bygger en hemsida åt ditt företag, på svenska, polska och fler språk när det behövs, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.', false);
+        $response->assertSee('Prodi bygger hemsidor för företag. Svenska, polska och fler språk när det behövs.', false);
+        $response->assertDontSee('småföretag', false);
+        $response->assertDontSee('tvåspråk', false);
+        $response->assertDontSee('Filip Kostrzewski', false);
         $response->assertSee('från 9 900 kr, individuell offert', false);
         $response->assertSee('559214-9370', false);
         $response->assertDontSee('ungefär två veckor', false);
@@ -47,7 +51,7 @@ class PageControllerTest extends TestCase
         $response->assertDontSee('15 000', false);
         $response->assertSee('4 900 kr', false);
         $response->assertSee('Skötsel', false);
-        $response->assertSee('På svenska, och på polska', false);
+        $response->assertSee('Flera språk', false);
         $response->assertDontSee('Opieka', false);
         $response->assertDontSee('Du pratar med Filip på polska', false);
         $html = $response->getContent();
@@ -68,8 +72,9 @@ class PageControllerTest extends TestCase
         $response->assertSee('package=start#offert', false);
         $response->assertSee('hreflang="pl"', false);
         $response->assertSee('hreflang="x-default"', false);
-        $response->assertSee('images/prodi-logo.png', false);
-        $response->assertSee('alt="Prodi"', false);
+        $response->assertSee('images/prodi-icon.png', false);
+        $response->assertSee('>Pro</span><span class="font-semibold text-ink">di</span>', false);
+        $response->assertDontSee('images/prodi-logo.png', false);
         $response->assertSee('apple-touch-icon.png', false);
         $response->assertSee('favicon.ico', false);
         $response->assertDontSee('favicon.svg', false);
@@ -88,11 +93,16 @@ class PageControllerTest extends TestCase
         $response = $this->get('/pl');
 
         $response->assertSee('<html lang="pl"', false);
-        $response->assertSee('images/prodi-logo.png', false);
-        $response->assertSee('alt="Prodi"', false);
-        $response->assertSee('Zrobię Ci dwujęzyczną stronę PL/SV', false);
+        $response->assertSee('images/prodi-icon.png', false);
+        $response->assertSee('>Pro</span><span class="font-semibold text-ink">di</span>', false);
+        $response->assertDontSee('images/prodi-logo.png', false);
+        $response->assertSee('Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
+        $response->assertSee('Prodi robi strony dla firm. Po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
+        $response->assertDontSee('małych firm', false);
+        $response->assertDontSee('dwujęzyczn', false);
+        $response->assertDontSee('Filip Kostrzewski', false);
         $response->assertSee('Opieka', false);
-        $response->assertSee('Zbuduję stronę po polsku i szwedzku', false);
+        $response->assertSee('Zbuduję stronę po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
         $response->assertDontSee('Skötsel', false);
         $response->assertSee('ok. 2 tygodnie', false);
         $response->assertSee('od 9 900 kr, wycena indywidualna', false);

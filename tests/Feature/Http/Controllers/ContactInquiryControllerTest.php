@@ -182,13 +182,13 @@ class ContactInquiryControllerTest extends TestCase
             ->post(route('sv.contact.store'), $this->payload())
             ->assertRedirect(route('sv.contact'))
             ->assertSessionHasErrors([
-                'form' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar Filip det därifrån.',
+                'form' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar vi det därifrån.',
             ]);
 
         $this->followingRedirects()
             ->from(route('sv.contact'))
             ->post(route('sv.contact.store'), $this->payload(['email' => 'anna2@example.com']))
-            ->assertSee('Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar Filip det därifrån.', false)
+            ->assertSee('Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar vi det därifrån.', false)
             ->assertDontSee('Server Error', false);
 
         $this->from(route('pl.contact'))

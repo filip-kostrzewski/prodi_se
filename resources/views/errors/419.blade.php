@@ -15,7 +15,7 @@
     </head>
     <body class="bg-paper text-ink antialiased">
         <main class="mx-auto flex min-h-screen max-w-xl flex-col justify-center gap-4 px-5">
-            <img src="{{ asset('images/prodi-logo.png') }}" alt="Prodi" width="160" height="225" class="h-20 w-auto">
+            <x-brand size="lg" />
             <h1 class="font-serif text-4xl">{{ __('site.errors.419_title') }}</h1>
             <p class="text-muted">{{ __('site.errors.419_text') }}</p>
             <a class="inline-flex w-fit rounded-full bg-pine px-5 py-3 text-sm font-semibold text-paper" href="{{ \App\Support\Locales::urlFor('contact', app()->getLocale()) }}">{{ __('site.nav.contact') }}</a>
