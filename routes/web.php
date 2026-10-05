@@ -7,6 +7,12 @@ use App\Http\Controllers\SeoController;
 use App\Support\Locales;
 use Illuminate\Support\Facades\Route;
 
+Route::redirect('/pl/exempel/stadning', '/pl/przyklady/sprzatanie', 301);
+Route::redirect('/pl/exempel/malning/tjanster', '/pl/przyklady/malowanie/uslugi', 301);
+Route::redirect('/pl/exempel/malning/galleri', '/pl/przyklady/malowanie/galeria', 301);
+Route::redirect('/pl/exempel/malning/kontakt', '/pl/przyklady/malowanie/kontakt', 301);
+Route::redirect('/pl/exempel/malning', '/pl/przyklady/malowanie', 301);
+
 foreach (Locales::DEFINITIONS as $code => $definition) {
     $registrar = Route::middleware('locale:'.$code)->name($code.'.');
 

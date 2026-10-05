@@ -20,7 +20,7 @@ class ContactInquiryControllerTest extends TestCase
     {
         return [
             'swedish' => ['sv.contact.store', 'sv', 'Tack. Vi har tagit emot din förfrågan och återkommer.'],
-            'polish' => ['pl.contact.store', 'pl', 'Dziękujemy. Dostaliśmy zapytanie i odezwiemy się.'],
+            'polish' => ['pl.contact.store', 'pl', 'Dziękuję. Dostałem zapytanie i odezwę się.'],
         ];
     }
 
@@ -81,6 +81,14 @@ class ContactInquiryControllerTest extends TestCase
             'message' => 'Skriv ett kort meddelande.',
         ]);
         $this->assertSame(0, ContactInquiry::query()->count());
+
+        $this->followingRedirects()
+            ->from(route('sv.contact'))
+            ->post(route('sv.contact.store'), [])
+            ->assertSee('aria-invalid="true"', false)
+            ->assertSee('id="name-error"', false)
+            ->assertSee('Fyll i ditt namn.', false)
+            ->assertSee('Rätta de markerade fälten.', false);
     }
 
     public function test_empty_polish_submission_shows_polish_validation_message(): void

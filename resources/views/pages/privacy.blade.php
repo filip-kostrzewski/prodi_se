@@ -18,13 +18,9 @@
                 <div class="mt-2 flex flex-col gap-2 text-sm leading-6 text-muted">
                     @if ($orgNumber)
                         <p>{{ __('site.privacy.org_line', ['number' => $orgNumber, 'city' => \App\Support\Company::city()]) }}</p>
-                    @else
-                        <p>{{ __('site.privacy.org_unpublished') }}</p>
                     @endif
                     @if ($streetLine)
                         <p>{{ $streetLine }}, {{ \App\Support\Company::city() }}</p>
-                    @else
-                        <p>{{ __('site.privacy.address_unpublished') }}</p>
                     @endif
                 </div>
             </section>

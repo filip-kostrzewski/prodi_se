@@ -44,35 +44,30 @@
         </div>
 
         <div class="mt-10 grid gap-4 lg:grid-cols-3">
-            @foreach (['start' => 'order-1', 'individual' => 'order-3'] as $key => $order)
-                <article @class(['flex flex-col gap-5 rounded-3xl border border-line bg-card p-6', $order])>
+            @foreach (['start', 'firma', 'individual'] as $key)
+                <article @class([
+                    'flex flex-col gap-5 rounded-3xl p-6',
+                    'bg-pine text-paper' => $key === 'firma',
+                    'border border-line bg-card' => $key !== 'firma',
+                ])>
                     <div>
                         <h3 class="font-serif text-3xl">{{ __("site.packages.names.$key") }}</h3>
                         <p class="mt-4 font-serif text-4xl">{{ __("site.packages.$key.price") }}</p>
-                        <p class="mt-1 text-sm text-muted">{{ __("site.packages.$key.cadence") }}</p>
+                        <p @class(['mt-1 text-sm', 'text-mist' => $key === 'firma', 'text-muted' => $key !== 'firma'])>{{ __("site.packages.$key.cadence") }}</p>
                     </div>
-                    <p class="text-sm leading-6 text-muted">{{ __("site.packages.$key.fit") }}</p>
-                    <ul class="flex flex-col gap-2 text-sm leading-6">
+                    <p @class(['text-base leading-7', 'text-mist' => $key === 'firma', 'text-muted' => $key !== 'firma'])>{{ __("site.packages.$key.fit") }}</p>
+                    <ul class="flex flex-col gap-2 text-base leading-7">
                         @foreach (__("site.packages.$key.points") as $point)
-                            <li class="flex gap-2"><span aria-hidden="true" class="text-pine">–</span><span>{{ $point }}</span></li>
+                            <li class="flex gap-2"><span aria-hidden="true" @class(['text-pine' => $key !== 'firma'])>–</span><span>{{ $point }}</span></li>
                         @endforeach
                     </ul>
+                    <a href="{{ \App\Support\Locales::quoteUrl($key) }}" @class([
+                        'mt-auto inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold',
+                        'bg-paper text-pine hover:bg-mist' => $key === 'firma',
+                        'bg-pine text-paper hover:bg-pine-deep' => $key !== 'firma',
+                    ])>{{ __('site.packages.choose') }}</a>
                 </article>
             @endforeach
-
-            <article class="order-2 flex flex-col gap-5 rounded-3xl bg-pine p-6 text-paper">
-                <div>
-                    <h3 class="font-serif text-3xl">{{ __('site.packages.names.firma') }}</h3>
-                    <p class="mt-4 font-serif text-4xl">{{ __('site.packages.firma.price') }}</p>
-                    <p class="mt-1 text-sm text-mist">{{ __('site.packages.firma.cadence') }}</p>
-                </div>
-                <p class="text-sm leading-6 text-mist">{{ __('site.packages.firma.fit') }}</p>
-                <ul class="flex flex-col gap-2 text-sm leading-6">
-                    @foreach (__('site.packages.firma.points') as $point)
-                        <li class="flex gap-2"><span aria-hidden="true">–</span><span>{{ $point }}</span></li>
-                    @endforeach
-                </ul>
-            </article>
         </div>
 
         <article class="mt-4 grid gap-6 rounded-3xl border border-line bg-card p-6 md:grid-cols-[16rem_1fr] md:items-center">
@@ -82,12 +77,13 @@
                 <p class="mt-1 text-sm text-muted">{{ __('site.packages.opieka.cadence') }}</p>
             </div>
             <div class="flex flex-col gap-4">
-                <p class="text-sm leading-6 text-muted">{{ __('site.packages.opieka.fit') }}</p>
-                <ul class="grid gap-2 text-sm leading-6 sm:grid-cols-3">
+                <p class="text-base leading-7 text-muted">{{ __('site.packages.opieka.fit') }}</p>
+                <ul class="grid gap-2 text-base leading-7 sm:grid-cols-3">
                     @foreach (__('site.packages.opieka.points') as $point)
                         <li class="rounded-2xl bg-paper px-3 py-3">{{ $point }}</li>
                     @endforeach
                 </ul>
+                <a href="{{ \App\Support\Locales::quoteUrl('opieka') }}" class="inline-flex w-fit items-center justify-center rounded-full bg-pine px-5 py-3 text-sm font-semibold text-paper hover:bg-pine-deep">{{ __('site.packages.choose') }}</a>
             </div>
         </article>
 
@@ -141,32 +137,57 @@
             <p class="mt-4 max-w-2xl text-lg leading-8 text-muted">{{ __('site.examples.intro') }}</p>
             <div class="mt-10 grid gap-4 lg:grid-cols-2">
                 @foreach ([
-                    'cleaning' => 'example.cleaning',
-                    'painting' => 'example.painting',
-                ] as $key => $route)
-                    <a href="{{ \App\Support\Locales::urlFor($route, app()->getLocale()) }}" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card">
-                        <div class="border-b border-line bg-paper px-4 py-3">
-                            <div class="flex gap-1.5" aria-hidden="true">
-                                <span class="size-2.5 rounded-full bg-line"></span>
-                                <span class="size-2.5 rounded-full bg-line"></span>
-                                <span class="size-2.5 rounded-full bg-line"></span>
-                            </div>
-                            <p @class([
-                                'mt-4 font-serif text-2xl',
-                                'text-ex-accent' => $key === 'cleaning',
-                                'text-clay' => $key === 'painting',
-                            ])>{{ __("site.examples.$key.title") }}</p>
-                            <p class="mt-2 max-w-sm text-sm leading-6 text-muted">{{ __('site.'.$key.'_site.hero') }}</p>
-                        </div>
-                        <div class="flex items-end justify-between gap-4 p-5">
-                            <div>
-                                <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.$key.kicker") }}</p>
-                                <p class="mt-2 text-sm leading-6 text-muted">{{ __("site.examples.$key.text") }}</p>
-                            </div>
-                            <span class="shrink-0 text-sm font-semibold group-hover:underline">{{ __('site.examples.open') }}</span>
+                    'evasstad' => ['url' => 'https://evasstad.se', 'image' => 'images/work/evasstad.jpg'],
+                    'wisegent' => ['url' => 'https://wisegent.se/se', 'image' => 'images/work/wisegent.jpg'],
+                ] as $key => $site)
+                    <a href="{{ $site['url'] }}" target="_blank" rel="noopener noreferrer" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card">
+                        <img
+                            src="{{ asset($site['image']) }}"
+                            alt="{{ __("site.examples.work.$key.image_alt") }}"
+                            width="1600"
+                            height="1000"
+                            loading="lazy"
+                            class="aspect-[16/10] w-full object-cover object-top"
+                        >
+                        <div class="flex flex-1 flex-col gap-3 p-5">
+                            <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.work.$key.kicker") }}</p>
+                            <h3 class="font-serif text-2xl">{{ __("site.examples.work.$key.title") }}</h3>
+                            <p class="text-base leading-7 text-muted">{{ __("site.examples.work.$key.text") }}</p>
+                            <span class="mt-auto inline-flex w-fit rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
+                                {{ __("site.examples.work.$key.open") }}
+                                <span class="sr-only"> ({{ __('site.examples.new_tab') }})</span>
+                            </span>
                         </div>
                     </a>
                 @endforeach
+            </div>
+
+            <div class="mt-16 border-t border-line pt-10">
+                <h3 class="font-serif text-3xl text-balance">{{ __('site.examples.secondary_title') }}</h3>
+                <p class="mt-3 max-w-2xl text-base leading-7 text-muted">{{ __('site.examples.secondary_intro') }}</p>
+                <div class="mt-8 grid gap-4 lg:grid-cols-2">
+                    @foreach ([
+                        'cleaning' => ['route' => 'example.cleaning', 'image' => 'images/examples/cleaning-hero.jpg'],
+                        'painting' => ['route' => 'example.painting', 'image' => 'images/examples/painting-hero.jpg'],
+                    ] as $key => $example)
+                        <a href="{{ \App\Support\Locales::urlFor($example['route'], app()->getLocale()) }}" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card sm:flex-row">
+                            <img
+                                src="{{ asset($example['image']) }}"
+                                alt="{{ __("site.examples.preview_$key") }}"
+                                width="1600"
+                                height="1067"
+                                loading="lazy"
+                                class="aspect-[16/10] w-full object-cover sm:aspect-auto sm:h-auto sm:w-40 sm:shrink-0"
+                            >
+                            <div class="flex flex-1 flex-col gap-2 p-5">
+                                <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.$key.kicker") }}</p>
+                                <h3 class="font-serif text-xl">{{ __("site.examples.$key.title") }}</h3>
+                                <p class="text-sm leading-6 text-muted">{{ __("site.examples.$key.text") }}</p>
+                                <span class="mt-auto inline-flex w-fit text-sm font-semibold text-ink underline decoration-line underline-offset-4">{{ __('site.examples.open') }}</span>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

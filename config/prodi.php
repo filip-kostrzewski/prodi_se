@@ -8,8 +8,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | Name, owner, city and organisation number are known. Prodi is an AB.
-    | Street address and postal code are not. Leave those empty until the
-    | owner supplies them. Do not invent a street or postal code.
+    | Street address, postal code and phone are not. Leave those empty until
+    | the owner supplies them. Do not invent a street, postal code or phone.
     |
     */
 
@@ -24,6 +24,14 @@ return [
     'street_address' => env('PRODI_STREET_ADDRESS'),
 
     'postal_code' => env('PRODI_POSTAL_CODE'),
+
+    /*
+    | Empty until Filip provides a number. Nothing is shown on the site
+    | while this is blank, and no number is invented here.
+    |
+    */
+
+    'phone' => env('PRODI_PHONE'),
 
     /*
     |--------------------------------------------------------------------------

@@ -16,11 +16,13 @@
     --color-line: #ddd4c6;
     --color-muted: #4a453e;
     --color-card: #fffdf8;
-    --color-ex-bg: #f3faf6;
-    --color-ex-ink: #12241e;
-    --color-ex-accent: #1c6b58;
+    --color-ex-bg: #f3fbfa;
+    --color-ex-ink: #102422;
+    --color-ex-muted: #1d3c38;
+    --color-ex-accent: #0c6b64;
+    --color-ex-soft: #e5f5f2;
     --color-ex-card: #ffffff;
-    --color-ex-line: #d3e3db;
+    --color-ex-line: #c9e0db;
 }
 
 @layer base {
@@ -48,10 +50,26 @@
     }
 }
 
+[data-theme='cleaning'] {
+    --color-ex-bg: #f3fbfa;
+    --color-ex-ink: #102422;
+    --color-ex-muted: #1d3c38;
+    --color-ex-accent: #0c6b64;
+    --color-ex-soft: #e5f5f2;
+    --color-ex-card: #ffffff;
+    --color-ex-line: #c9e0db;
+}
+
 [data-theme='painting'] {
-    --color-ex-bg: #f6f1e8;
-    --color-ex-ink: #261b13;
-    --color-ex-accent: #8d4320;
-    --color-ex-card: #fffdf8;
-    --color-ex-line: #e3d5c4;
+    --color-ex-bg: #fbf4ec;
+    --color-ex-ink: #2a160f;
+    --color-ex-muted: #4a2c22;
+    --color-ex-accent: #8a3b16;
+    --color-ex-soft: #f6e6d8;
+    --color-ex-card: #fffaf5;
+    --color-ex-line: #ead4c2;
+}
+
+[data-theme] :focus-visible {
+    outline-color: var(--color-ex-accent);
 }
