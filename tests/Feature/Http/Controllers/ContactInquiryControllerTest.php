@@ -170,6 +170,36 @@ class ContactInquiryControllerTest extends TestCase
         $response->assertDontSee('<script>alert(1)</script>', false);
     }
 
+    public function test_a_mail_transport_failure_keeps_the_inquiry_and_shows_an_error(): void
+    {
+        config([
+            'mail.default' => 'postmark',
+            'services.postmark.key' => null,
+            'prodi.contact_email' => 'filip@prodi.se',
+        ]);
+
+        $this->from(route('sv.contact'))
+            ->post(route('sv.contact.store'), $this->payload())
+            ->assertRedirect(route('sv.contact'))
+            ->assertSessionHasErrors([
+                'form' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar Filip det därifrån.',
+            ]);
+
+        $this->followingRedirects()
+            ->from(route('sv.contact'))
+            ->post(route('sv.contact.store'), $this->payload(['email' => 'anna2@example.com']))
+            ->assertSee('Förfrågan är sparad, men mejlet gick inte iväg. Skriv till filip@prodi.se så tar Filip det därifrån.', false)
+            ->assertDontSee('Server Error', false);
+
+        $this->from(route('pl.contact'))
+            ->post(route('pl.contact.store'), $this->payload(['email' => 'anna3@example.com']))
+            ->assertSessionHasErrors([
+                'form' => 'Zapytanie jest zapisane, ale mail nie wyszedł. Napisz na filip@prodi.se, to odpiszę.',
+            ]);
+
+        $this->assertSame(3, ContactInquiry::query()->count());
+    }
+
     public function test_posted_id_does_not_become_the_record_id(): void
     {
         Mail::fake();

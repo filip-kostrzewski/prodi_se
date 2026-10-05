@@ -427,6 +427,7 @@ return [
             'package_invalid' => 'Välj ett av paketen i listan.',
             'message_required' => 'Skriv ett kort meddelande.',
             'message_max' => 'Meddelandet får vara högst 5 000 tecken.',
+            'mail_failed' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till :email så tar Filip det därifrån.',
         ],
     ],
 

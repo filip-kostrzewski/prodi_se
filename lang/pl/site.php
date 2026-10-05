@@ -427,6 +427,7 @@ return [
             'package_invalid' => 'Wybierz pakiet z listy.',
             'message_required' => 'Napisz krótką wiadomość.',
             'message_max' => 'Wiadomość może mieć najwyżej 5 000 znaków.',
+            'mail_failed' => 'Zapytanie jest zapisane, ale mail nie wyszedł. Napisz na :email, to odpiszę.',
         ],
     ],
 

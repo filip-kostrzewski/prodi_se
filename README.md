@@ -84,11 +84,8 @@ APP_ENV=production
 APP_DEBUG=false
 APP_URL=https://prodi.se
 
-MAIL_MAILER=smtp
-MAIL_HOST=
-MAIL_PORT=587
-MAIL_USERNAME=
-MAIL_PASSWORD=
+MAIL_MAILER=postmark
+POSTMARK_API_KEY=
 MAIL_FROM_ADDRESS=filip@prodi.se
 MAIL_FROM_NAME=Prodi
 
@@ -100,7 +97,7 @@ PRODI_POSTAL_CODE=
 QUEUE_CONNECTION=sync
 ```
 
-Fill `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME` and `MAIL_PASSWORD` with the SMTP settings for `filip@prodi.se`. Leave street and postal code empty. Quote mail is sent inside the web request (`ContactInquiryReceived` is not queued), so `QUEUE_CONNECTION=sync` is enough and no queue worker is required.
+Set `POSTMARK_API_KEY` to the Postmark server API token. `POSTMARK_TOKEN` is read when `POSTMARK_API_KEY` is empty, so either name in the server `.env` works. `filip@prodi.se` must be a confirmed sender, or the domain a verified signature, in that Postmark server. Leave street and postal code empty. Quote mail is sent inside the web request (`ContactInquiryReceived` is not queued), so `QUEUE_CONNECTION=sync` is enough and no queue worker is required. If Postmark rejects the message, the inquiry stays in `contact_inquiries` and the form shows an error instead of a 500.
 
 ```bash
 php artisan migrate --force

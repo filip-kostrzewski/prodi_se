@@ -38,7 +38,9 @@
                 <p role="status" class="rounded-2xl bg-mist px-4 py-3 text-base">{{ session('status') }}</p>
             @endif
 
-            @if ($errors->any())
+            @if ($errors->has('form'))
+                <p role="alert" class="rounded-2xl border border-clay/30 bg-paper px-4 py-3 text-base text-clay">{{ $errors->first('form') }}</p>
+            @elseif ($errors->any())
                 <p role="alert" class="rounded-2xl border border-clay/30 bg-paper px-4 py-3 text-base text-clay">{{ __('site.form.errors.summary') }}</p>
             @endif
 
