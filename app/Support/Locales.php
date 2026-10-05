@@ -95,6 +95,16 @@ final class Locales
         return route($locale.'.'.$page);
     }
 
+    /**
+     * Contact form with a package already chosen, scrolled to the form.
+     */
+    public static function quoteUrl(string $package, ?string $locale = null): string
+    {
+        $locale ??= app()->getLocale();
+
+        return self::urlFor('contact', $locale).'?package='.$package.'#offert';
+    }
+
     public static function currentPage(): ?string
     {
         $name = request()->route()?->getName();

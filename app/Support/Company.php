@@ -64,6 +64,52 @@ final class Company
         return self::filled('postal_code');
     }
 
+    public static function phone(): ?string
+    {
+        return self::filled('phone');
+    }
+
+    /**
+     * tel:+46… from a Swedish number. Null when PRODI_PHONE is empty.
+     */
+    public static function phoneHref(): ?string
+    {
+        $digits = self::phoneDigits();
+
+        return $digits === null ? null : 'tel:+'.$digits;
+    }
+
+    /**
+     * WhatsApp link for the same number. Null when PRODI_PHONE is empty.
+     */
+    public static function whatsappHref(): ?string
+    {
+        $digits = self::phoneDigits();
+
+        return $digits === null ? null : 'https://wa.me/'.$digits;
+    }
+
+    private static function phoneDigits(): ?string
+    {
+        $phone = self::phone();
+
+        if ($phone === null) {
+            return null;
+        }
+
+        $digits = preg_replace('/\D+/', '', $phone) ?? '';
+
+        if ($digits === '') {
+            return null;
+        }
+
+        if (str_starts_with($digits, '0')) {
+            $digits = '46'.substr($digits, 1);
+        }
+
+        return $digits;
+    }
+
     /**
      * Street and postal code only. The city is already known and shown separately.
      */

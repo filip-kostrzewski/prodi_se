@@ -9,6 +9,9 @@
     $orgNumber = \App\Support\Company::orgNumber();
     $streetLine = \App\Support\Company::streetLine();
     $email = \App\Support\Company::publishedContactEmail();
+    $phone = \App\Support\Company::phone();
+    $phoneHref = \App\Support\Company::phoneHref();
+    $whatsappHref = \App\Support\Company::whatsappHref();
 @endphp
 
 <!DOCTYPE html>
@@ -56,7 +59,11 @@
                         @endforeach
                     </nav>
 
-                    <a href="{{ $contact }}" class="hidden rounded-full bg-pine px-4 py-2 text-sm font-semibold text-paper hover:bg-pine-deep sm:inline-flex">
+                    @if ($phoneHref)
+                        <a href="{{ $phoneHref }}" class="hidden text-sm font-semibold hover:underline lg:inline">{{ $phone }}</a>
+                    @endif
+
+                    <a href="{{ $contact }}#offert" class="inline-flex rounded-full bg-pine px-3 py-2 text-sm font-semibold text-paper hover:bg-pine-deep sm:px-4">
                         {{ __('site.nav.contact') }}
                     </a>
 
@@ -94,6 +101,14 @@
                     @endif
                     @if ($email)
                         <p class="text-sm"><a class="underline decoration-line underline-offset-4" href="mailto:{{ $email }}">{{ $email }}</a></p>
+                    @endif
+                    @if ($phoneHref)
+                        <p class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                            <a class="font-semibold underline decoration-line underline-offset-4" href="{{ $phoneHref }}">{{ $phone }}</a>
+                            @if ($whatsappHref)
+                                <a class="font-semibold underline decoration-line underline-offset-4" href="{{ $whatsappHref }}">WhatsApp</a>
+                            @endif
+                        </p>
                     @endif
                 </div>
                 <nav aria-label="{{ __('site.a11y.primary') }}" class="flex flex-col gap-2 text-sm md:items-end">

@@ -53,6 +53,7 @@ Do not invent these. Leave them empty until they are known.
 | `PRODI_ORG_NUMBER` | `559214-9370`. Prodi is an AB. Shown in the footer and on the privacy policy. |
 | `PRODI_STREET_ADDRESS` | Street address. Still unknown. Hidden until set. |
 | `PRODI_POSTAL_CODE` | Postal code. Still unknown. Hidden until set. |
+| `PRODI_PHONE` | Empty on purpose. A call link and a WhatsApp link appear only after a real number is set. Do not invent one. |
 | `MAIL_FROM_ADDRESS` | `filip@prodi.se`. |
 | `APP_URL` | `http://prodi.test` locally, `https://prodi.se` in production. |
 
