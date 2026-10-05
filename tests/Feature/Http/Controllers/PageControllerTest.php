@@ -68,6 +68,11 @@ class PageControllerTest extends TestCase
         $response->assertSee('package=start#offert', false);
         $response->assertSee('hreflang="pl"', false);
         $response->assertSee('hreflang="x-default"', false);
+        $response->assertSee('images/prodi-logo.png', false);
+        $response->assertSee('alt="Prodi"', false);
+        $response->assertSee('apple-touch-icon.png', false);
+        $response->assertSee('favicon.ico', false);
+        $response->assertDontSee('favicon.svg', false);
         $response->assertSee('og:locale" content="sv_SE"', false);
         $response->assertSee('LocalBusiness', false);
         $response->assertSee('ProfessionalService', false);
@@ -83,6 +88,8 @@ class PageControllerTest extends TestCase
         $response = $this->get('/pl');
 
         $response->assertSee('<html lang="pl"', false);
+        $response->assertSee('images/prodi-logo.png', false);
+        $response->assertSee('alt="Prodi"', false);
         $response->assertSee('Zrobię Ci dwujęzyczną stronę PL/SV', false);
         $response->assertSee('Opieka', false);
         $response->assertSee('Zbuduję stronę po polsku i szwedzku', false);

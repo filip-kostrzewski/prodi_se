@@ -57,6 +57,7 @@ final class StructuredData
             '@id' => $url.'/#organization',
             'name' => Company::name(),
             'url' => $url,
+            'logo' => $url.'/images/prodi-logo.png',
             'founder' => [
                 '@type' => 'Person',
                 'name' => Company::owner(),
