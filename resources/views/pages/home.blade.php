@@ -137,26 +137,57 @@
             <p class="mt-4 max-w-2xl text-lg leading-8 text-muted">{{ __('site.examples.intro') }}</p>
             <div class="mt-10 grid gap-4 lg:grid-cols-2">
                 @foreach ([
-                    'cleaning' => ['route' => 'example.cleaning', 'image' => 'images/examples/cleaning-hero.jpg'],
-                    'painting' => ['route' => 'example.painting', 'image' => 'images/examples/painting-hero.jpg'],
-                ] as $key => $example)
-                    <a href="{{ \App\Support\Locales::urlFor($example['route'], app()->getLocale()) }}" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card">
+                    'evasstad' => ['url' => 'https://evasstad.se', 'image' => 'images/work/evasstad.jpg'],
+                    'wisegent' => ['url' => 'https://wisegent.se/se', 'image' => 'images/work/wisegent.jpg'],
+                ] as $key => $site)
+                    <a href="{{ $site['url'] }}" target="_blank" rel="noopener noreferrer" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card">
                         <img
-                            src="{{ asset($example['image']) }}"
-                            alt="{{ __("site.examples.preview_$key") }}"
+                            src="{{ asset($site['image']) }}"
+                            alt="{{ __("site.examples.work.$key.image_alt") }}"
                             width="1600"
-                            height="1067"
+                            height="1000"
                             loading="lazy"
-                            class="aspect-[16/10] w-full object-cover motion-safe:transition motion-safe:duration-500 motion-safe:group-hover:scale-[1.03]"
+                            class="aspect-[16/10] w-full object-cover object-top"
                         >
                         <div class="flex flex-1 flex-col gap-3 p-5">
-                            <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.$key.kicker") }}</p>
-                            <h3 class="font-serif text-2xl">{{ __("site.examples.$key.title") }}</h3>
-                            <p class="text-base leading-7 text-muted">{{ __("site.examples.$key.text") }}</p>
-                            <span class="mt-auto inline-flex w-fit rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper">{{ __('site.examples.open') }}</span>
+                            <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.work.$key.kicker") }}</p>
+                            <h3 class="font-serif text-2xl">{{ __("site.examples.work.$key.title") }}</h3>
+                            <p class="text-base leading-7 text-muted">{{ __("site.examples.work.$key.text") }}</p>
+                            <span class="mt-auto inline-flex w-fit rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper">
+                                {{ __("site.examples.work.$key.open") }}
+                                <span class="sr-only"> ({{ __('site.examples.new_tab') }})</span>
+                            </span>
                         </div>
                     </a>
                 @endforeach
+            </div>
+
+            <div class="mt-16 border-t border-line pt-10">
+                <h3 class="font-serif text-3xl text-balance">{{ __('site.examples.secondary_title') }}</h3>
+                <p class="mt-3 max-w-2xl text-base leading-7 text-muted">{{ __('site.examples.secondary_intro') }}</p>
+                <div class="mt-8 grid gap-4 lg:grid-cols-2">
+                    @foreach ([
+                        'cleaning' => ['route' => 'example.cleaning', 'image' => 'images/examples/cleaning-hero.jpg'],
+                        'painting' => ['route' => 'example.painting', 'image' => 'images/examples/painting-hero.jpg'],
+                    ] as $key => $example)
+                        <a href="{{ \App\Support\Locales::urlFor($example['route'], app()->getLocale()) }}" class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-card sm:flex-row">
+                            <img
+                                src="{{ asset($example['image']) }}"
+                                alt="{{ __("site.examples.preview_$key") }}"
+                                width="1600"
+                                height="1067"
+                                loading="lazy"
+                                class="aspect-[16/10] w-full object-cover sm:aspect-auto sm:h-auto sm:w-40 sm:shrink-0"
+                            >
+                            <div class="flex flex-1 flex-col gap-2 p-5">
+                                <p class="text-xs font-semibold tracking-wide text-clay uppercase">{{ __("site.examples.$key.kicker") }}</p>
+                                <h3 class="font-serif text-xl">{{ __("site.examples.$key.title") }}</h3>
+                                <p class="text-sm leading-6 text-muted">{{ __("site.examples.$key.text") }}</p>
+                                <span class="mt-auto inline-flex w-fit text-sm font-semibold text-ink underline decoration-line underline-offset-4">{{ __('site.examples.open') }}</span>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

@@ -54,6 +54,15 @@ class PageControllerTest extends TestCase
         $this->assertTrue(strpos($html, '>Start<') < strpos($html, '>Firma<'));
         $this->assertTrue(strpos($html, '>Firma<') < strpos($html, '>Individuellt<'));
         $this->assertTrue(strpos($html, '>Individuellt<') < strpos($html, '>Skötsel<'));
+        $response->assertSee('images/work/evasstad.jpg', false);
+        $response->assertSee('images/work/wisegent.jpg', false);
+        $response->assertSee('https://evasstad.se', false);
+        $response->assertSee('https://wisegent.se/se', false);
+        $response->assertSee('Webbplats för städfirma — evasstad.se', false);
+        $response->assertSee('Wisegent — vår egen SaaS', false);
+        $response->assertSee('Egen produkt', false);
+        $response->assertSee('Design by Wisegent', false);
+        $response->assertDontSee('Inga kundcase att visa ännu', false);
         $response->assertSee('images/examples/cleaning-hero.jpg', false);
         $response->assertSee('images/examples/painting-hero.jpg', false);
         $response->assertSee('package=start#offert', false);
@@ -84,6 +93,12 @@ class PageControllerTest extends TestCase
         $response->assertDontSee('około dwóch tygodni', false);
         $response->assertDontSee('15 000', false);
         $response->assertSee(route('sv.home'), false);
+        $response->assertSee('https://evasstad.se', false);
+        $response->assertSee('https://wisegent.se/se', false);
+        $response->assertSee('Strona dla firmy sprzątającej — evasstad.se', false);
+        $response->assertSee('Wisegent — moja własna SaaS', false);
+        $response->assertSee('Własny produkt', false);
+        $response->assertDontSee('Nie mamy jeszcze realizacji klientów', false);
         $response->assertSee('hreflang="sv"', false);
     }
 

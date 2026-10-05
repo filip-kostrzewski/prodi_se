@@ -28,7 +28,7 @@ return [
     'nav' => [
         'packages' => 'Paket',
         'process' => 'Så går det till',
-        'examples' => 'Exempel',
+        'examples' => 'Arbete',
         'faq' => 'Frågor',
         'contact' => 'Kontakt',
         'privacy' => 'Integritetspolicy',
@@ -204,12 +204,31 @@ return [
     ],
 
     'examples' => [
-        'title' => 'Exempel på hur det kan se ut',
-        'intro' => 'Inga kundcase att visa ännu. Här är två exempeldesign, så det syns hur ett Start-paket och ett Firma-paket kan se ut. De är exempel, inte riktiga kunder.',
+        'title' => 'Sidor som finns ute',
+        'intro' => 'En levererad webbplats för en städfirma, och Wisegent som är vår egen SaaS. Länkarna öppnar de riktiga sidorna.',
+        'new_tab' => 'öppnas i en ny flik',
+        'secondary_title' => 'Så kan ett Start- eller Firma-paket se ut',
+        'secondary_intro' => 'De här två är exempeldesign, inte riktiga kunder. De visar upplägget, inte ett levererat jobb.',
         'disclaimer' => 'Exempeldesign, inte en riktig kund.',
         'banner' => 'Exempeldesign från Prodi. Inte en riktig kund och inte ett riktigt företag.',
         'back' => 'Tillbaka till Prodi',
         'open' => 'Öppna exemplet',
+        'work' => [
+            'evasstad' => [
+                'kicker' => 'Levererad webbplats',
+                'title' => 'Webbplats för städfirma — evasstad.se',
+                'text' => 'Evas Städ AB, städfirma i Stockholm och Åkersberga. Sidfoten krediterar Design by Wisegent.',
+                'open' => 'Öppna evasstad.se',
+                'image_alt' => 'Skärmbild av startsidan på evasstad.se för Evas Städ AB.',
+            ],
+            'wisegent' => [
+                'kicker' => 'Egen produkt',
+                'title' => 'Wisegent — vår egen SaaS',
+                'text' => 'System för städföretag: schema, fakturering och RUT. Sidan är vår egen produkt, inte en kundsajt.',
+                'open' => 'Öppna wisegent.se',
+                'image_alt' => 'Skärmbild av startsidan på wisegent.se, system för städföretag.',
+            ],
+        ],
         'preview_cleaning' => 'Förhandsvisning av exempeldesignen för en städfirma',
         'preview_painting' => 'Förhandsvisning av exempeldesignen för måleri och renovering',
         'photo_credit' => 'Foton: Unsplash.',

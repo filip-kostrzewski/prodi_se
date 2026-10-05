@@ -28,7 +28,7 @@ return [
     'nav' => [
         'packages' => 'Pakiety',
         'process' => 'Jak to działa',
-        'examples' => 'Przykłady',
+        'examples' => 'Prace',
         'faq' => 'Pytania',
         'contact' => 'Kontakt',
         'privacy' => 'Polityka prywatności',
@@ -204,12 +204,31 @@ return [
     ],
 
     'examples' => [
-        'title' => 'Tak może to wyglądać',
-        'intro' => 'Nie mamy jeszcze realizacji klientów. Poniżej są dwa projekty przykładowe, żeby było widać, jak mogą wyglądać pakiety Start i Firma. To przykłady, nie prawdziwi klienci.',
+        'title' => 'Strony, które już są w sieci',
+        'intro' => 'Jedna dostarczona strona dla firmy sprzątającej i Wisegent, moja własna usługa SaaS. Linki otwierają prawdziwe strony.',
+        'new_tab' => 'otwiera się w nowej karcie',
+        'secondary_title' => 'Tak może wyglądać pakiet Start albo Firma',
+        'secondary_intro' => 'Te dwa projekty są przykładowe, to nie są prawdziwi klienci. Pokazują układ, nie oddaną realizację.',
         'disclaimer' => 'Projekt przykładowy, nie prawdziwy klient.',
         'banner' => 'Przykładowy projekt Prodi. To nie jest prawdziwy klient ani prawdziwa firma.',
         'back' => 'Wróć do Prodi',
         'open' => 'Otwórz przykład',
+        'work' => [
+            'evasstad' => [
+                'kicker' => 'Dostarczona strona',
+                'title' => 'Strona dla firmy sprzątającej — evasstad.se',
+                'text' => 'Evas Städ AB, firma sprzątająca w Sztokholmie i Åkersberga. W stopce jest „Design by Wisegent”.',
+                'open' => 'Otwórz evasstad.se',
+                'image_alt' => 'Zrzut ekranu strony głównej evasstad.se dla Evas Städ AB.',
+            ],
+            'wisegent' => [
+                'kicker' => 'Własny produkt',
+                'title' => 'Wisegent — moja własna SaaS',
+                'text' => 'System dla firm sprzątających: grafik, faktury i RUT. To moja własna usługa, nie strona klienta.',
+                'open' => 'Otwórz wisegent.se',
+                'image_alt' => 'Zrzut ekranu strony głównej wisegent.se, system dla firm sprzątających.',
+            ],
+        ],
         'preview_cleaning' => 'Podgląd przykładowego projektu dla firmy sprzątającej',
         'preview_painting' => 'Podgląd przykładowego projektu dla malowania i remontu',
         'photo_credit' => 'Zdjęcia: Unsplash.',
