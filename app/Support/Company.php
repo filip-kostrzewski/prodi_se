@@ -14,6 +14,11 @@ final class Company
         return (string) config('prodi.name');
     }
 
+    public static function legalName(): string
+    {
+        return (string) config('prodi.legal_name');
+    }
+
     public static function owner(): string
     {
         return (string) config('prodi.owner');

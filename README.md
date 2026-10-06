@@ -50,14 +50,15 @@ Do not invent these. Leave them empty until they are known.
 | Variable | What to put |
 | --- | --- |
 | `PRODI_CONTACT_EMAIL` | `filip@prodi.se`. Quote requests are emailed here. An address at example.com, example.org or example.net is not shown on the site. |
-| `PRODI_ORG_NUMBER` | `559214-9370`. Prodi is an AB. Shown in the footer and on the privacy policy. |
+| `PRODI_LEGAL_NAME` | `Prodi Digital AB`. Registered company name. Shown in the footer, on the contact page, in both privacy policies and in the organization structured data. The brand name stays `Prodi`. |
+| `PRODI_ORG_NUMBER` | `559214-9370`. Shown with the legal name in the footer and on the privacy policy. |
 | `PRODI_STREET_ADDRESS` | `Tegelbrukets väg 41`. Shown in the footer, on the contact page and in the privacy policy. |
 | `PRODI_POSTAL_CODE` | `195 59`. Shown with the city as `195 59 Märsta`. |
 | `PRODI_PHONE` | Empty on purpose. A call link and a WhatsApp link appear only after a real number is set. Do not invent one. |
 | `MAIL_FROM_ADDRESS` | `filip@prodi.se`. |
 | `APP_URL` | `http://prodi.test` locally, `https://prodi.se` in production. |
 
-`PRODI_NAME`, `PRODI_OWNER` and `PRODI_CITY` already match the studio. Prices are exkl. moms: Start 4 900 kr, Firma 7 900 kr, Opieka 299 kr/month, Individuellt from 9 900 kr, individual quote.
+`PRODI_NAME` is the brand (`Prodi`). `PRODI_LEGAL_NAME` is the registered company (`Prodi Digital AB`). `PRODI_OWNER` and `PRODI_CITY` already match the studio. Prices are exkl. moms: Start 4 900 kr, Firma 7 900 kr, Opieka 299 kr/month, Individuellt from 9 900 kr, individual quote.
 
 ## Add another language
 
@@ -90,6 +91,7 @@ MAIL_FROM_ADDRESS=filip@prodi.se
 MAIL_FROM_NAME=Prodi
 
 PRODI_CONTACT_EMAIL=filip@prodi.se
+PRODI_LEGAL_NAME="Prodi Digital AB"
 PRODI_ORG_NUMBER=559214-9370
 PRODI_STREET_ADDRESS="Tegelbrukets väg 41"
 PRODI_POSTAL_CODE="195 59"
@@ -136,7 +138,7 @@ Privacy policy URLs for Meta lead ads:
 - Swedish: `https://prodi.se/integritetspolicy`
 - Polish: `https://prodi.se/pl/polityka-prywatnosci`
 
-The policy names Prodi AB, org.nr `559214-9370`, Tegelbrukets väg 41, 195 59 Märsta, and covers the quote form and Meta lead forms.
+The policy names Prodi Digital AB, org.nr `559214-9370`, Tegelbrukets väg 41, 195 59 Märsta, and covers the quote form and Meta lead forms.
 
 On each push, the autodeploy hook on the VPS should run from the project directory:
 

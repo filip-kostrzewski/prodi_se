@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Support\Company;
 use Illuminate\Contracts\View\View;
 
 class PageController extends Controller
@@ -26,7 +27,7 @@ class PageController extends Controller
     {
         return view('pages.privacy', [
             'title' => __('site.meta.privacy_title'),
-            'description' => __('site.meta.privacy_description'),
+            'description' => __('site.meta.privacy_description', ['legal' => Company::legalName()]),
         ]);
     }
 }

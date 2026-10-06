@@ -55,7 +55,9 @@ final class StructuredData
         $organization = [
             '@type' => ['Organization', 'LocalBusiness', 'ProfessionalService'],
             '@id' => $url.'/#organization',
-            'name' => Company::name(),
+            'name' => Company::legalName(),
+            'legalName' => Company::legalName(),
+            'alternateName' => Company::name(),
             'url' => $url,
             'logo' => $url.'/images/prodi-icon.png',
             'address' => $address,

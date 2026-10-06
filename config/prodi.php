@@ -14,6 +14,8 @@ return [
 
     'name' => env('PRODI_NAME', 'Prodi'),
 
+    'legal_name' => env('PRODI_LEGAL_NAME') ?: 'Prodi Digital AB',
+
     'owner' => env('PRODI_OWNER', 'Filip Kostrzewski'),
 
     'city' => env('PRODI_CITY', 'Märsta'),

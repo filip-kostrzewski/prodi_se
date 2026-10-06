@@ -8,7 +8,7 @@ return [
         'contact_title' => 'Begär offert — Prodi',
         'contact_description' => 'Berätta om firman och vilket paket du tittar på. Vi återkommer personligen. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
         'privacy_title' => 'Integritetspolicy — Prodi',
-        'privacy_description' => 'Så hanterar Prodi AB uppgifter från offertformuläret och från lead-annonser på Meta.',
+        'privacy_description' => 'Så hanterar :legal uppgifter från offertformuläret och från lead-annonser på Meta.',
         'cleaning_title' => 'Exempeldesign: städfirma — Prodi',
         'cleaning_description' => 'Exempeldesign: ensidig hemsida för en städfirma, med foto, tjänster och kontakt. Inte en riktig kund.',
         'painting_description' => 'Exempeldesign: hemsida med flera undersidor för måleri och renovering, med bilder på jobb. Inte en riktig kund.',
@@ -433,7 +433,7 @@ return [
 
     'privacy' => [
         'title' => 'Integritetspolicy',
-        'lead' => 'Prodi AB använder uppgifterna du lämnar för att kunna svara på en förfrågan om hemsida. Här står vad som samlas in, från offertformuläret och från lead-annonser på Meta.',
+        'lead' => ':legal använder uppgifterna du lämnar för att kunna svara på en förfrågan om hemsida. Här står vad som samlas in, från offertformuläret och från lead-annonser på Meta.',
         'sections' => [
             [
                 'title' => 'Offertformuläret',
@@ -453,7 +453,7 @@ return [
             ],
         ],
         'company_title' => 'Företagsuppgifter',
-        'org_line' => 'Prodi AB, org.nr :number, :city.',
+        'org_line' => ':legal, org.nr :number, :city.',
         'org_unpublished' => 'Organisationsnumret publiceras här när det är ifyllt.',
         'address_unpublished' => 'Besöksadress och postnummer publiceras här när de är ifyllda. Tills dess står de inte på sidan.',
     ],
@@ -461,7 +461,7 @@ return [
     'footer' => [
         'blurb' => 'Prodi bygger hemsidor för företag. Svenska, polska och fler språk när det behövs.',
         'prices' => 'Priser exkl. moms.',
-        'org_number' => 'Prodi AB · org.nr :number',
+        'org_number' => ':legal · org.nr :number',
         'rights' => 'Prodi',
     ],
 

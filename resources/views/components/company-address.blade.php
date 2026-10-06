@@ -5,7 +5,7 @@
 
 <div {{ $attributes->class('flex flex-col gap-1') }}>
     @if ($orgNumber)
-        <p>{{ __('site.footer.org_number', ['number' => $orgNumber]) }}</p>
+        <p>{{ __('site.footer.org_number', ['legal' => \App\Support\Company::legalName(), 'number' => $orgNumber]) }}</p>
     @endif
     @foreach (\App\Support\Company::addressLines() as $line)
         <p>{{ $line }}</p>

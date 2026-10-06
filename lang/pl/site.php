@@ -8,7 +8,7 @@ return [
         'contact_title' => 'Poproś o wycenę — Prodi',
         'contact_description' => 'Napisz krótko o firmie i o pakiecie. Odezwę się osobiście. Start 4 900 kr, Firma 7 900 kr, exkl. moms.',
         'privacy_title' => 'Polityka prywatności — Prodi',
-        'privacy_description' => 'Jak Prodi AB przetwarza dane z formularza wyceny i z reklam leadowych Meta.',
+        'privacy_description' => 'Jak :legal przetwarza dane z formularza wyceny i z reklam leadowych Meta.',
         'cleaning_title' => 'Przykładowy projekt: firma sprzątająca — Prodi',
         'cleaning_description' => 'Projekt przykładowy: jednostronicowa strona dla firmy sprzątającej, ze zdjęciem, usługami i kontaktem. Nie prawdziwy klient.',
         'painting_description' => 'Projekt przykładowy: strona z podstronami dla malowania i remontu, ze zdjęciami prac. Nie prawdziwy klient.',
@@ -433,7 +433,7 @@ return [
 
     'privacy' => [
         'title' => 'Polityka prywatności',
-        'lead' => 'Prodi AB używa danych, które podajesz, żeby odpowiedzieć na zapytanie o stronę. Tu jest, co zbieram z formularza wyceny i z reklam leadowych Meta.',
+        'lead' => ':legal używa danych, które podajesz, żeby odpowiedzieć na zapytanie o stronę. Tu jest, co zbieram z formularza wyceny i z reklam leadowych Meta.',
         'sections' => [
             [
                 'title' => 'Formularz wyceny',
@@ -453,7 +453,7 @@ return [
             ],
         ],
         'company_title' => 'Dane firmy',
-        'org_line' => 'Prodi AB, org.nr :number, :city.',
+        'org_line' => ':legal, org.nr :number, :city.',
         'org_unpublished' => 'Numer organizacji pojawi się tutaj, gdy będzie uzupełniony.',
         'address_unpublished' => 'Adres i kod pocztowy pojawią się tutaj, gdy będą uzupełnione. Do tego czasu nie ma ich na stronie.',
     ],
@@ -461,7 +461,7 @@ return [
     'footer' => [
         'blurb' => 'Prodi robi strony dla firm. Po szwedzku, po polsku i w innych językach, kiedy trzeba.',
         'prices' => 'Ceny exkl. moms.',
-        'org_number' => 'Prodi AB · org.nr :number',
+        'org_number' => ':legal · org.nr :number',
         'rights' => 'Prodi',
     ],
 

@@ -100,6 +100,8 @@ class PageControllerTest extends TestCase
         $response->assertDontSee('images/prodi-logo.png', false);
         $response->assertSee('Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
         $response->assertSee('Prodi robi strony dla firm. Po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
+        $response->assertSee('Prodi Digital AB · org.nr 559214-9370', false);
+        $response->assertDontSee('Prodi AB', false);
         $response->assertDontSee('małych firm', false);
         $response->assertDontSee('dwujęzyczn', false);
         $response->assertDontSee('Filip Kostrzewski', false);
@@ -141,9 +143,11 @@ class PageControllerTest extends TestCase
             ->assertSee('Integritetspolicy', false)
             ->assertSee('Offertformuläret', false)
             ->assertSee('Lead-annonser på Meta', false)
-            ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Prodi Digital AB · org.nr 559214-9370', false)
+            ->assertSee('Så hanterar Prodi Digital AB uppgifter', false)
             ->assertSee('Tegelbrukets väg 41', false)
             ->assertSee('195 59 Märsta', false)
+            ->assertDontSee('Prodi AB', false)
             ->assertDontSee('Besöksadress och postnummer publiceras här när de är ifyllda.', false);
 
         $this->get(route('pl.privacy'))
@@ -151,9 +155,11 @@ class PageControllerTest extends TestCase
             ->assertSee('Polityka prywatności', false)
             ->assertSee('Formularz wyceny', false)
             ->assertSee('Reklamy leadowe Meta', false)
-            ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Prodi Digital AB · org.nr 559214-9370', false)
+            ->assertSee('Jak Prodi Digital AB przetwarza dane', false)
             ->assertSee('Tegelbrukets väg 41', false)
             ->assertSee('195 59 Märsta', false)
+            ->assertDontSee('Prodi AB', false)
             ->assertDontSee('Adres i kod pocztowy pojawią się tutaj, gdy będą uzupełnione.', false);
     }
 
@@ -175,16 +181,21 @@ class PageControllerTest extends TestCase
         config(['prodi.contact_email' => 'filip@prodi.se']);
 
         $this->get('/')
-            ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Prodi Digital AB · org.nr 559214-9370', false)
+            ->assertSee('legalName', false)
+            ->assertSee('Prodi Digital AB', false)
             ->assertSee('Tegelbrukets väg 41', false)
             ->assertSee('195 59 Märsta', false)
             ->assertSee('filip@prodi.se', false)
+            ->assertDontSee('Prodi AB', false)
             ->assertDontSee('example.com', false)
             ->assertDontSee('Filip Kostrzewski', false);
 
         $this->get(route('sv.contact'))
+            ->assertSee('Prodi Digital AB · org.nr 559214-9370', false)
             ->assertSee('Tegelbrukets väg 41', false)
-            ->assertSee('195 59 Märsta', false);
+            ->assertSee('195 59 Märsta', false)
+            ->assertDontSee('Prodi AB', false);
     }
 
     public function test_contact_form_preselects_a_package_from_the_query(): void
