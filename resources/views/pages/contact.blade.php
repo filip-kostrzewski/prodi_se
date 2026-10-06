@@ -7,22 +7,17 @@
         $invalid = fn (string $field): bool => $errors->has($field);
         $control = fn (string $field): string => 'rounded-xl border bg-paper px-3 py-3 '.($invalid($field) ? 'border-clay' : 'border-line');
         $phone = \App\Support\Company::phone();
-        $email = \App\Support\Company::publishedContactEmail();
     @endphp
     <div class="mx-auto grid max-w-6xl gap-12 px-5 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
         <div>
             <h1 class="font-serif text-4xl text-balance sm:text-5xl">{{ __('site.contact.title') }}</h1>
             <p class="mt-4 text-lg leading-8 text-muted">{{ __('site.contact.lead') }}</p>
             <p class="mt-6 text-base leading-7 text-muted">{{ __('site.contact.aside') }}</p>
-            @if ($email || $phone)
-                <div class="mt-6 flex flex-col gap-2 text-base">
-                    @if ($email)
-                        <a class="font-semibold underline decoration-line underline-offset-4" href="mailto:{{ $email }}">{{ $email }}</a>
-                    @endif
-                    @if ($phone)
-                        <a class="font-semibold underline decoration-line underline-offset-4" href="{{ \App\Support\Company::phoneHref() }}">{{ $phone }}</a>
-                        <a class="font-semibold underline decoration-line underline-offset-4" href="{{ \App\Support\Company::whatsappHref() }}">WhatsApp</a>
-                    @endif
+            <x-company-address class="mt-6 text-base" />
+            @if ($phone)
+                <div class="mt-4 flex flex-col gap-2 text-base">
+                    <a class="font-semibold underline decoration-line underline-offset-4" href="{{ \App\Support\Company::phoneHref() }}">{{ $phone }}</a>
+                    <a class="font-semibold underline decoration-line underline-offset-4" href="{{ \App\Support\Company::whatsappHref() }}">WhatsApp</a>
                 </div>
             @endif
         </div>

@@ -6,9 +6,6 @@
     $home = \App\Support\Locales::urlFor('home', $locale);
     $contact = \App\Support\Locales::urlFor('contact', $locale);
     $privacy = \App\Support\Locales::urlFor('privacy', $locale);
-    $orgNumber = \App\Support\Company::orgNumber();
-    $streetLine = \App\Support\Company::streetLine();
-    $email = \App\Support\Company::publishedContactEmail();
     $phone = \App\Support\Company::phone();
     $phoneHref = \App\Support\Company::phoneHref();
     $whatsappHref = \App\Support\Company::whatsappHref();
@@ -97,15 +94,7 @@
                     </a>
                     <p class="max-w-md text-sm leading-6 text-muted">{{ __('site.footer.blurb') }}</p>
                     <p class="text-sm text-muted">{{ __('site.footer.prices') }}</p>
-                    @if ($orgNumber)
-                        <p class="text-sm text-muted">{{ __('site.footer.org_number', ['number' => $orgNumber]) }}</p>
-                    @endif
-                    @if ($streetLine)
-                        <p class="text-sm text-muted">{{ $streetLine }}, {{ \App\Support\Company::city() }}</p>
-                    @endif
-                    @if ($email)
-                        <p class="text-sm"><a class="underline decoration-line underline-offset-4" href="mailto:{{ $email }}">{{ $email }}</a></p>
-                    @endif
+                    <x-company-address class="text-sm text-muted" />
                     @if ($phoneHref)
                         <p class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
                             <a class="font-semibold underline decoration-line underline-offset-4" href="{{ $phoneHref }}">{{ $phone }}</a>

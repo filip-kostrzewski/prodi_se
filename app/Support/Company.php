@@ -111,6 +111,29 @@ final class Company
     }
 
     /**
+     * @return list<string>
+     */
+    public static function addressLines(): array
+    {
+        $lines = [];
+
+        if ($street = self::streetAddress()) {
+            $lines[] = $street;
+        }
+
+        $locality = trim(implode(' ', array_filter([
+            self::postalCode(),
+            self::city() !== '' ? self::city() : null,
+        ])));
+
+        if ($locality !== '') {
+            $lines[] = $locality;
+        }
+
+        return $lines;
+    }
+
+    /**
      * Street and postal code only. The city is already known and shown separately.
      */
     public static function streetLine(): ?string

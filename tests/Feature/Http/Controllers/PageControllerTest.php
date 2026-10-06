@@ -83,7 +83,9 @@ class PageControllerTest extends TestCase
         $response->assertSee('ProfessionalService', false);
         $response->assertSee('Offer', false);
         $response->assertSee('4900', false);
-        $response->assertDontSee('streetAddress', false);
+        $response->assertSee('Tegelbrukets väg 41', false);
+        $response->assertSee('195 59 Märsta', false);
+        $response->assertSee('streetAddress', false);
         $response->assertDontSee('<?php', false);
         $response->assertDontSee('example.com', false);
     }
@@ -139,16 +141,19 @@ class PageControllerTest extends TestCase
             ->assertSee('Integritetspolicy', false)
             ->assertSee('Offertformuläret', false)
             ->assertSee('Lead-annonser på Meta', false)
-            ->assertSee('Prodi AB, org.nr 559214-9370, Märsta.', false)
-            ->assertDontSee('Besöksadress och postnummer publiceras här när de är ifyllda.', false)
-            ->assertDontSee('streetAddress', false);
+            ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Tegelbrukets väg 41', false)
+            ->assertSee('195 59 Märsta', false)
+            ->assertDontSee('Besöksadress och postnummer publiceras här när de är ifyllda.', false);
 
         $this->get(route('pl.privacy'))
             ->assertOk()
             ->assertSee('Polityka prywatności', false)
             ->assertSee('Formularz wyceny', false)
             ->assertSee('Reklamy leadowe Meta', false)
-            ->assertSee('Prodi AB, org.nr 559214-9370, Märsta.', false)
+            ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Tegelbrukets väg 41', false)
+            ->assertSee('195 59 Märsta', false)
             ->assertDontSee('Adres i kod pocztowy pojawią się tutaj, gdy będą uzupełnione.', false);
     }
 
@@ -171,8 +176,15 @@ class PageControllerTest extends TestCase
 
         $this->get('/')
             ->assertSee('Prodi AB · org.nr 559214-9370', false)
+            ->assertSee('Tegelbrukets väg 41', false)
+            ->assertSee('195 59 Märsta', false)
             ->assertSee('filip@prodi.se', false)
-            ->assertDontSee('example.com', false);
+            ->assertDontSee('example.com', false)
+            ->assertDontSee('Filip Kostrzewski', false);
+
+        $this->get(route('sv.contact'))
+            ->assertSee('Tegelbrukets väg 41', false)
+            ->assertSee('195 59 Märsta', false);
     }
 
     public function test_contact_form_preselects_a_package_from_the_query(): void

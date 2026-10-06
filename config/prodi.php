@@ -7,9 +7,8 @@ return [
     | Public company facts
     |--------------------------------------------------------------------------
     |
-    | Name, owner, city and organisation number are known. Prodi is an AB.
-    | Street address, postal code and phone are not. Leave those empty until
-    | the owner supplies them. Do not invent a street, postal code or phone.
+    | Name, owner, city, organisation number and the Märsta address are known.
+    | Phone is not. Leave PRODI_PHONE empty until a real number exists.
     |
     */
 
@@ -21,9 +20,9 @@ return [
 
     'org_number' => env('PRODI_ORG_NUMBER') ?: '559214-9370',
 
-    'street_address' => env('PRODI_STREET_ADDRESS'),
+    'street_address' => env('PRODI_STREET_ADDRESS') ?: 'Tegelbrukets väg 41',
 
-    'postal_code' => env('PRODI_POSTAL_CODE'),
+    'postal_code' => env('PRODI_POSTAL_CODE') ?: '195 59',
 
     /*
     | Empty until Filip provides a number. Nothing is shown on the site

@@ -51,8 +51,8 @@ Do not invent these. Leave them empty until they are known.
 | --- | --- |
 | `PRODI_CONTACT_EMAIL` | `filip@prodi.se`. Quote requests are emailed here. An address at example.com, example.org or example.net is not shown on the site. |
 | `PRODI_ORG_NUMBER` | `559214-9370`. Prodi is an AB. Shown in the footer and on the privacy policy. |
-| `PRODI_STREET_ADDRESS` | Street address. Still unknown. Hidden until set. |
-| `PRODI_POSTAL_CODE` | Postal code. Still unknown. Hidden until set. |
+| `PRODI_STREET_ADDRESS` | `Tegelbrukets väg 41`. Shown in the footer, on the contact page and in the privacy policy. |
+| `PRODI_POSTAL_CODE` | `195 59`. Shown with the city as `195 59 Märsta`. |
 | `PRODI_PHONE` | Empty on purpose. A call link and a WhatsApp link appear only after a real number is set. Do not invent one. |
 | `MAIL_FROM_ADDRESS` | `filip@prodi.se`. |
 | `APP_URL` | `http://prodi.test` locally, `https://prodi.se` in production. |
@@ -91,13 +91,13 @@ MAIL_FROM_NAME=Prodi
 
 PRODI_CONTACT_EMAIL=filip@prodi.se
 PRODI_ORG_NUMBER=559214-9370
-PRODI_STREET_ADDRESS=
-PRODI_POSTAL_CODE=
+PRODI_STREET_ADDRESS="Tegelbrukets väg 41"
+PRODI_POSTAL_CODE="195 59"
 
 QUEUE_CONNECTION=sync
 ```
 
-Set `POSTMARK_API_KEY` to the Postmark server API token. `POSTMARK_TOKEN` is read when `POSTMARK_API_KEY` is empty, so either name in the server `.env` works. `filip@prodi.se` must be a confirmed sender, or the domain a verified signature, in that Postmark server. Leave street and postal code empty. Quote mail is sent inside the web request (`ContactInquiryReceived` is not queued), so `QUEUE_CONNECTION=sync` is enough and no queue worker is required. If Postmark rejects the message, the inquiry stays in `contact_inquiries` and the form shows an error instead of a 500.
+Set `POSTMARK_API_KEY` to the Postmark server API token. `POSTMARK_TOKEN` is read when `POSTMARK_API_KEY` is empty, so either name in the server `.env` works. `filip@prodi.se` must be a confirmed sender, or the domain a verified signature, in that Postmark server. An empty `PRODI_STREET_ADDRESS` or `PRODI_POSTAL_CODE` still falls back to Tegelbrukets väg 41, 195 59 Märsta. Quote mail is sent inside the web request (`ContactInquiryReceived` is not queued), so `QUEUE_CONNECTION=sync` is enough and no queue worker is required. If Postmark rejects the message, the inquiry stays in `contact_inquiries` and the form shows an error instead of a 500.
 
 ```bash
 php artisan migrate --force
@@ -136,7 +136,7 @@ Privacy policy URLs for Meta lead ads:
 - Swedish: `https://prodi.se/integritetspolicy`
 - Polish: `https://prodi.se/pl/polityka-prywatnosci`
 
-The policy names Prodi AB, org.nr `559214-9370`, and covers the quote form and Meta lead forms. Street address and postal code stay off the page until `PRODI_STREET_ADDRESS` and `PRODI_POSTAL_CODE` are set.
+The policy names Prodi AB, org.nr `559214-9370`, Tegelbrukets väg 41, 195 59 Märsta, and covers the quote form and Meta lead forms.
 
 On each push, the autodeploy hook on the VPS should run from the project directory:
 
