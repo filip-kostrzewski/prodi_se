@@ -36,9 +36,10 @@ return [
 
     'hero' => [
         'eyebrow' => 'Studio stron www w Märsta',
-        'title' => 'Strona dla',
-        'title_highlight' => 'Twojej firmy.',
-        'lead' => 'Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba. Ustawię Google Business Profile i formularz kontaktowy — gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms.',
+        'title' => 'Twoja firma.',
+        'title_highlight' => 'Dobrze pokazana.',
+        'lead' => 'Strona, która pokazuje, co robisz, i ułatwia kontakt. Po szwedzku, po polsku i w innych językach, kiedy trzeba.',
+        'showcase_label' => 'Design dopasowany do firmy',
         'primary' => 'Poproś o wycenę',
         'secondary' => 'Zobacz pakiety',
         'price_from' => 'od',
@@ -53,7 +54,7 @@ return [
 
     'audience' => [
         'label' => 'Dla firm',
-        'text' => 'Bez strony, ze stroną, która nie działa, albo tylko z Facebookiem. Sklep, sprzątanie, warsztat i inne działalności. Po szwedzku, po polsku i w innych językach, kiedy trzeba.',
+        'text' => 'Dla firm, które potrzebują pierwszej strony albo chcą odświeżyć obecną.',
         'trades' => [
             'Budowa i remonty',
             'Sprzątanie',
@@ -134,28 +135,16 @@ return [
         'intro' => 'Od krótkiej rozmowy do opublikowanej strony. Ok. 2 tygodnie, gdy materiały są już u mnie.',
         'steps' => [
             [
-                'title' => 'Krótka rozmowa',
-                'text' => 'Telefon, kawa w Märsta albo wideo. Ustalam, czego potrzebujesz i który pakiet pasuje.',
+                'title' => 'Rozmawiamy',
+                'text' => 'Opowiadasz o firmie. Pokazuję pierwsze demo, bez zobowiązań. Telefon, wideo albo kawa w Märsta.',
             ],
             [
-                'title' => 'Szybkie demo',
-                'text' => 'Pokazuję, jak strona może wyglądać. Bez zobowiązań.',
+                'title' => 'Buduję stronę',
+                'text' => 'Akceptujesz ofertę i stałą cenę. Zbuduję stronę po szwedzku, po polsku i w innych językach, kiedy trzeba. Widzisz projekt przed publikacją.',
             ],
             [
-                'title' => 'Oferta',
-                'text' => 'Pakiet, cena i zakres. Akceptujesz, kiedy się zgadza.',
-            ],
-            [
-                'title' => 'Materiały i realizacja',
-                'text' => 'Wysyłasz materiały. Zbuduję stronę po szwedzku, po polsku i w innych językach, kiedy trzeba. Ok. 2 tygodnie od ich otrzymania.',
-            ],
-            [
-                'title' => 'Publikacja',
-                'text' => 'Poprawki, domena, strona online i profil Google Business.',
-            ],
-            [
-                'title' => 'Opieka, jeśli chcesz',
-                'text' => 'Hosting i drobne zmiany za 299 kr miesięcznie, bez okresu wiązania.',
+                'title' => 'Jesteś w sieci',
+                'text' => 'Strona, domena i profil Google są gotowe. Opcjonalna opieka i drobne zmiany za 299 kr miesięcznie.',
             ],
         ],
     ],
@@ -175,41 +164,34 @@ return [
     ],
 
     'why' => [
-        'title' => 'Dlaczego Prodi',
+        'title' => 'Więcej niż ładny pierwszy ekran.',
+        'intro' => 'Pokaż, co potrafisz, zadbaj o obecność firmy w Google i ułatw klientowi pierwszy kontakt.',
         'items' => [
             [
-                'title' => 'Więcej niż dwa języki',
-                'text' => 'Strona po szwedzku, żeby znaleźli Cię lokalni klienci. Po polsku i w innych językach, kiedy trzeba.',
+                'illustration' => 'website',
+                'title' => 'Strona z charakterem Twojej firmy',
+                'text' => 'Twoje usługi i zdjęcia w przemyślanym projekcie. Wygodna na telefonie i na komputerze.',
             ],
             [
-                'title' => 'Lokalnie',
-                'text' => 'Jestem z Märsty, blisko Sztokholmu i Uppsali. Możesz wpaść na kawę.',
+                'illustration' => 'map',
+                'title' => 'Twoje miejsce na mapie',
+                'text' => 'Pomagam z profilem firmy w Google i podstawowym SEO. Dbam, żeby informacje o Twojej firmie były na miejscu.',
             ],
             [
-                'title' => 'Stałe ceny',
-                'text' => 'Start 4 900 kr i Firma 7 900 kr, exkl. moms. Poniżej tego, co u wielu agencji kosztuje podobna strona.',
-            ],
-            [
-                'title' => 'Profil Google w cenie',
-                'text' => 'Klienci znajdą firmę w Google i na mapach, nie tylko na Facebooku. Formularz kontaktowy też jest w pakiecie.',
-            ],
-            [
-                'title' => 'Szybko',
-                'text' => 'Ok. 2 tygodnie od otrzymania materiałów.',
-            ],
-            [
-                'title' => 'Bez pułapek',
-                'text' => 'Domena zostaje Twoja. Opieka nie ma okresu wiązania.',
+                'illustration' => 'message',
+                'title' => 'Łatwo się odezwać',
+                'text' => 'Wyraźne przyciski i formularz, który przesyła zapytania do Ciebie. Klient wie, jak zrobić następny krok.',
             ],
         ],
+        'promises' => ['Wiele języków', 'Lokalnie w Märsta', 'Domena należy do Ciebie'],
     ],
 
     'examples' => [
-        'title' => 'Strony, które już są w sieci',
-        'intro' => 'Jedna dostarczona strona dla firmy sprzątającej i Wisegent, moja własna usługa SaaS. Linki otwierają prawdziwe strony.',
+        'title' => 'Każda firma ma swój styl.',
+        'intro' => 'Strona klienta i moja własna SaaS. Zobacz działające projekty.',
         'new_tab' => 'otwiera się w nowej karcie',
         'secondary_title' => 'Tak może wyglądać pakiet Start albo Firma',
-        'secondary_intro' => 'Te dwa projekty są przykładowe, to nie są prawdziwi klienci. Pokazują układ, nie oddaną realizację.',
+        'secondary_intro' => 'Dwa projekty demonstracyjne do obejrzenia. To przykłady, nie realizacje klientów.',
         'disclaimer' => 'Projekt przykładowy, nie prawdziwy klient.',
         'banner' => 'Przykładowy projekt Prodi. To nie jest prawdziwy klient ani prawdziwa firma.',
         'back' => 'Wróć do Prodi',

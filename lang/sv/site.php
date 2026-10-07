@@ -36,9 +36,10 @@ return [
 
     'hero' => [
         'eyebrow' => 'Webbyrå i Märsta',
-        'title' => 'En hemsida för',
-        'title_highlight' => 'ditt företag.',
-        'lead' => 'Vi bygger en hemsida åt ditt företag, på svenska, polska och fler språk när det behövs, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.',
+        'title' => 'Ditt företag.',
+        'title_highlight' => 'Snyggt på webben.',
+        'lead' => 'En personlig hemsida som visar vad du gör och gör det enkelt att ta kontakt. På svenska, polska och fler språk när det behövs.',
+        'showcase_label' => 'Design som passar din firma',
         'primary' => 'Begär offert',
         'secondary' => 'Se paketen',
         'price_from' => 'från',
@@ -53,7 +54,7 @@ return [
 
     'audience' => [
         'label' => 'För företag',
-        'text' => 'Utan sida, med en sida som inte jobbar, eller som bara finns på Facebook. Bygg, städ, verkstad, butik och andra verksamheter. Svenska, polska och fler språk när det behövs.',
+        'text' => 'För dig som vill ha en första hemsida eller ge den gamla ett nytt liv.',
         'trades' => [
             'Bygg och renovering',
             'Städ',
@@ -134,28 +135,16 @@ return [
         'intro' => 'Från ett kort samtal till en publicerad sida. Cirka två veckor när materialet är inne.',
         'steps' => [
             [
-                'title' => 'Ett kort samtal',
-                'text' => 'Telefon, kaffe i Märsta eller video. Vi går igenom vad du behöver och vilket paket som passar.',
+                'title' => 'Vi pratar',
+                'text' => 'Berätta om företaget. Du får se ett första demo, utan att binda dig. Telefon, video eller kaffe i Märsta.',
             ],
             [
-                'title' => 'Ett snabbt demo',
-                'text' => 'Du får se hur sidan kan se ut, utan att binda dig.',
+                'title' => 'Vi bygger',
+                'text' => 'Du godkänner offert och fast pris. Vi tar hand om design, text och bygge. Du ser sidan före publicering.',
             ],
             [
-                'title' => 'Offert',
-                'text' => 'Paket, pris och vad som ingår. Du tackar ja när det stämmer.',
-            ],
-            [
-                'title' => 'Material och bygge',
-                'text' => 'Du skickar underlag. Vi bygger sidan på svenska, polska och fler språk när det behövs, cirka två veckor från att materialet är inne.',
-            ],
-            [
-                'title' => 'Publicering',
-                'text' => 'Justeringar, domän, sidan live och Google-företagsprofilen på plats.',
-            ],
-            [
-                'title' => 'Skötsel om du vill',
-                'text' => 'Hosting och små ändringar för 299 kr i månaden, utan bindningstid.',
+                'title' => 'Du är live',
+                'text' => 'Hemsida, domän och Google-företagsprofil på plats. Skötsel finns som tillval för 299 kr i månaden.',
             ],
         ],
     ],
@@ -175,41 +164,34 @@ return [
     ],
 
     'why' => [
-        'title' => 'Varför Prodi',
+        'title' => 'Mer än en snygg förstasida.',
+        'intro' => 'Visa vad du kan, gör företaget lättare att hitta och ge besökaren en tydlig väg till kontakt.',
         'items' => [
             [
-                'title' => 'Flera språk',
-                'text' => 'Sidan görs på svenska så lokala kunder hittar dig. Polska och fler språk när det behövs.',
+                'illustration' => 'website',
+                'title' => 'En sida som känns som du',
+                'text' => 'Dina tjänster och bilder i en genomtänkt design. Lika enkel att använda på mobilen som på datorn.',
             ],
             [
-                'title' => 'Lokalt',
-                'text' => 'Vi finns i Märsta, nära Stockholm och Uppsala. Vi kan ta en kaffe.',
+                'illustration' => 'map',
+                'title' => 'En plats på kartan',
+                'text' => 'Vi hjälper dig med Google-företagsprofilen och grundläggande SEO. Så finns rätt information om företaget på plats.',
             ],
             [
-                'title' => 'Fasta priser',
-                'text' => 'Start 4 900 kr och Firma 7 900 kr, exkl. moms. Under det som är vanligt hos många byråer för samma typ av sida.',
-            ],
-            [
-                'title' => 'Google-företagsprofilen ingår',
-                'text' => 'Kunderna hittar dig i Google och på kartan, inte bara på Facebook. Kontaktformuläret ingår också.',
-            ],
-            [
-                'title' => 'Snabbt',
-                'text' => 'Cirka två veckor från att materialet kommit in.',
-            ],
-            [
-                'title' => 'Utan fällor',
-                'text' => 'Domänen är din. Skötsel har ingen bindningstid.',
+                'illustration' => 'message',
+                'title' => 'Lätt att höra av sig',
+                'text' => 'Tydliga kontaktknappar och ett formulär som skickar förfrågningar till dig. Besökaren vet vad nästa steg är.',
             ],
         ],
+        'promises' => ['Flera språk', 'Lokalt i Märsta', 'Du äger din domän'],
     ],
 
     'examples' => [
-        'title' => 'Sidor som finns ute',
-        'intro' => 'En levererad webbplats för en städfirma, och Wisegent som är vår egen SaaS. Länkarna öppnar de riktiga sidorna.',
+        'title' => 'Webbplatser med egen karaktär.',
+        'intro' => 'En kundwebbplats och vår egen SaaS. Utforska de riktiga sidorna.',
         'new_tab' => 'öppnas i en ny flik',
         'secondary_title' => 'Så kan ett Start- eller Firma-paket se ut',
-        'secondary_intro' => 'De här två är exempeldesign, inte riktiga kunder. De visar upplägget, inte ett levererat jobb.',
+        'secondary_intro' => 'Två exempeldesigner att utforska. De är demo, inte levererade kundwebbplatser.',
         'disclaimer' => 'Exempeldesign, inte en riktig kund.',
         'banner' => 'Exempeldesign från Prodi. Inte en riktig kund och inte ett riktigt företag.',
         'back' => 'Tillbaka till Prodi',

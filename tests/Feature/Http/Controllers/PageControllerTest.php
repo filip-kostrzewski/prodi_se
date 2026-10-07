@@ -39,7 +39,7 @@ class PageControllerTest extends TestCase
         $response = $this->get('/');
 
         $response->assertSee('<html lang="sv"', false);
-        $response->assertSee('Vi bygger en hemsida åt ditt företag, på svenska, polska och fler språk när det behövs, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.', false);
+        $response->assertSee('En personlig hemsida som visar vad du gör och gör det enkelt att ta kontakt. På svenska, polska och fler språk när det behövs.', false);
         $response->assertSee('Prodi bygger hemsidor för företag. Svenska, polska och fler språk när det behövs.', false);
         $response->assertDontSee('småföretag', false);
         $response->assertDontSee('tvåspråk', false);
@@ -98,7 +98,7 @@ class PageControllerTest extends TestCase
         $response->assertSee('images/prodi-icon.png', false);
         $response->assertSee('>Pro</span><span class="font-semibold text-ink">di</span>', false);
         $response->assertDontSee('images/prodi-logo.png', false);
-        $response->assertSee('Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
+        $response->assertSee('Strona, która pokazuje, co robisz, i ułatwia kontakt. Po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
         $response->assertSee('Prodi robi strony dla firm. Po szwedzku, po polsku i w innych językach, kiedy trzeba.', false);
         $response->assertSee('Prodi Digital AB · org.nr 559214-9370', false);
         $response->assertDontSee('Prodi AB', false);
