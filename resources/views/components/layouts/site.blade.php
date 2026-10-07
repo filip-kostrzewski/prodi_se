@@ -22,22 +22,22 @@
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
     </head>
-    <body class="bg-paper text-ink antialiased">
+    <body class="site-shell bg-paper text-ink antialiased">
         <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-card focus:px-4 focus:py-2">
             {{ __('site.a11y.skip') }}
         </a>
 
-        <header class="sticky top-0 z-40 border-b border-line/80 bg-paper/90 backdrop-blur-md">
-            <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+        <header class="sticky top-0 z-40 border-b border-line bg-paper">
+            <div class="site-container flex min-h-20 items-center justify-between gap-3">
                 <a href="{{ $home }}" class="inline-flex shrink-0 items-center" aria-label="Prodi">
                     <x-brand />
                 </a>
 
-                <nav aria-label="{{ __('site.a11y.primary') }}" class="hidden items-center gap-6 text-sm text-muted md:flex">
-                    <a class="hover:text-ink" href="{{ $home }}#packages">{{ __('site.nav.packages') }}</a>
-                    <a class="hover:text-ink" href="{{ $home }}#process">{{ __('site.nav.process') }}</a>
-                    <a class="hover:text-ink" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
-                    <a class="hover:text-ink" href="{{ $home }}#faq">{{ __('site.nav.faq') }}</a>
+                <nav aria-label="{{ __('site.a11y.primary') }}" class="hidden items-center gap-7 text-sm text-muted lg:flex">
+                    <a class="py-3 hover:text-ink" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
+                    <a class="py-3 hover:text-ink" href="{{ $home }}#packages">{{ __('site.nav.packages') }}</a>
+                    <a class="py-3 hover:text-ink" href="{{ $home }}#process">{{ __('site.nav.process') }}</a>
+                    <a class="py-3 hover:text-ink" href="{{ $home }}#faq">{{ __('site.nav.faq') }}</a>
                 </nav>
 
                 <div class="flex items-center gap-2 sm:gap-3">
@@ -47,10 +47,10 @@
                                 href="{{ \App\Support\Locales::urlFor($page, $code) }}"
                                 hreflang="{{ $definition['hreflang'] }}"
                                 lang="{{ $code }}"
-                                aria-label="{{ $definition['name'] }}"
+                                aria-label="{{ $definition['label'] }} — {{ $definition['name'] }}"
                                 @if ($locale === $code) aria-current="page" @endif
                                 @class([
-                                    'rounded-full px-2.5 py-1',
+                                    'rounded-full px-2.5 py-2',
                                     'bg-pine text-paper' => $locale === $code,
                                     'text-muted hover:text-ink' => $locale !== $code,
                                 ])
@@ -62,20 +62,22 @@
                         <a href="{{ $phoneHref }}" class="hidden text-sm font-semibold hover:underline lg:inline">{{ $phone }}</a>
                     @endif
 
-                    <a href="{{ $contact }}#offert" class="inline-flex rounded-full bg-pine px-3 py-2 text-sm font-semibold text-paper hover:bg-pine-deep sm:px-4">
+                    <a href="{{ $contact }}#offert" class="hidden items-center gap-3 rounded-xl bg-pine px-4 py-3 text-sm font-semibold text-paper hover:bg-pine-deep sm:inline-flex">
                         {{ __('site.nav.contact') }}
+                        <x-icon name="external" class="size-4" />
                     </a>
 
-                    <details class="relative md:hidden">
-                        <summary class="cursor-pointer rounded-full border border-line bg-card px-3 py-2 text-sm font-semibold">
-                            {{ __('site.a11y.menu') }}
+                    <details data-mobile-menu class="relative lg:hidden">
+                        <summary class="flex size-11 cursor-pointer items-center justify-center rounded-xl border border-line bg-card">
+                            <x-icon name="menu" />
+                            <span class="sr-only">{{ __('site.a11y.menu') }}</span>
                         </summary>
-                        <nav aria-label="{{ __('site.a11y.primary') }}" class="absolute right-0 z-50 mt-2 flex w-52 flex-col gap-1 rounded-2xl border border-line bg-card p-3 text-sm shadow-lg">
+                        <nav aria-label="{{ __('site.a11y.primary') }}" class="absolute right-0 z-50 mt-4 flex w-60 flex-col gap-1 rounded-2xl border border-line bg-card p-3 text-sm shadow-lg">
+                            <a class="rounded-lg px-3 py-3 hover:bg-paper" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
                             <a class="rounded-lg px-3 py-2 hover:bg-paper" href="{{ $home }}#packages">{{ __('site.nav.packages') }}</a>
                             <a class="rounded-lg px-3 py-2 hover:bg-paper" href="{{ $home }}#process">{{ __('site.nav.process') }}</a>
-                            <a class="rounded-lg px-3 py-2 hover:bg-paper" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
                             <a class="rounded-lg px-3 py-2 hover:bg-paper" href="{{ $home }}#faq">{{ __('site.nav.faq') }}</a>
-                            <a class="rounded-lg px-3 py-2 hover:bg-paper" href="{{ $contact }}">{{ __('site.nav.contact') }}</a>
+                            <a class="mt-2 rounded-lg bg-pine px-3 py-3 font-semibold text-paper" href="{{ $contact }}#offert">{{ __('site.nav.contact') }}</a>
                         </nav>
                     </details>
                 </div>
@@ -86,8 +88,8 @@
             {{ $slot }}
         </main>
 
-        <footer class="border-t border-line">
-            <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-[1.4fr_1fr]">
+        <footer class="border-t border-line bg-card">
+            <div class="site-container grid gap-8 py-14 md:grid-cols-[1.4fr_1fr]">
                 <div class="flex flex-col gap-3">
                     <a href="{{ $home }}" class="inline-flex w-fit items-center" aria-label="Prodi">
                         <x-brand size="lg" />
@@ -104,14 +106,14 @@
                         </p>
                     @endif
                 </div>
-                <nav aria-label="{{ __('site.a11y.primary') }}" class="flex flex-col gap-2 text-sm md:items-end">
-                    <a class="hover:underline" href="{{ $contact }}">{{ __('site.nav.contact') }}</a>
-                    <a class="hover:underline" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
-                    <a class="hover:underline" href="{{ $privacy }}">{{ __('site.nav.privacy') }}</a>
+                <nav aria-label="{{ __('site.a11y.primary') }}" class="flex flex-col items-start gap-1 text-sm md:items-end">
+                    <a class="py-2 hover:underline" href="{{ $contact }}">{{ __('site.nav.contact') }}</a>
+                    <a class="py-2 hover:underline" href="{{ $home }}#examples">{{ __('site.nav.examples') }}</a>
+                    <a class="py-2 hover:underline" href="{{ $privacy }}">{{ __('site.nav.privacy') }}</a>
                 </nav>
             </div>
             <div class="border-t border-line">
-                <p class="mx-auto max-w-6xl px-5 py-4 text-xs text-muted">© {{ now()->year }} {{ __('site.footer.rights') }}</p>
+                <p class="site-container py-5 text-xs text-muted">© {{ now()->year }} {{ __('site.footer.rights') }}</p>
             </div>
         </footer>
     </body>

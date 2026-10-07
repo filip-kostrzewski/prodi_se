@@ -36,7 +36,8 @@ return [
 
     'hero' => [
         'eyebrow' => 'Studio stron www w Märsta',
-        'title' => 'Strona dla Twojej firmy. Gotowa w ok. 2 tygodnie.',
+        'title' => 'Strona dla',
+        'title_highlight' => 'Twojej firmy.',
         'lead' => 'Zrobię stronę dla Twojej firmy, po szwedzku, po polsku i w innych językach, kiedy trzeba. Ustawię Google Business Profile i formularz kontaktowy — gotowe w ok. 2 tygodnie, od 4 900 kr exkl. moms.',
         'primary' => 'Poproś o wycenę',
         'secondary' => 'Zobacz pakiety',

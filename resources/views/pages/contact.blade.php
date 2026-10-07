@@ -5,12 +5,13 @@
             ? $selectedPackage
             : null;
         $invalid = fn (string $field): bool => $errors->has($field);
-        $control = fn (string $field): string => 'rounded-xl border bg-paper px-3 py-3 '.($invalid($field) ? 'border-clay' : 'border-line');
+        $control = fn (string $field): string => 'min-w-0 w-full rounded-xl border bg-paper px-4 py-3 '.($invalid($field) ? 'border-clay' : 'border-line');
         $phone = \App\Support\Company::phone();
     @endphp
-    <div class="mx-auto grid max-w-6xl gap-12 px-5 py-14 lg:grid-cols-[0.8fr_1.2fr] lg:py-20">
-        <div>
-            <h1 class="font-serif text-4xl text-balance sm:text-5xl">{{ __('site.contact.title') }}</h1>
+    <div class="site-container grid gap-10 py-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:py-24">
+        <div class="lg:pt-6">
+            <p class="eyebrow mb-6 text-pine">{{ __('site.nav.contact') }}</p>
+            <h1 class="section-title">{{ __('site.contact.title') }}</h1>
             <p class="mt-4 text-lg leading-8 text-muted">{{ __('site.contact.lead') }}</p>
             <p class="mt-6 text-base leading-7 text-muted">{{ __('site.contact.aside') }}</p>
             <x-company-address class="mt-6 text-base" />
@@ -22,7 +23,7 @@
             @endif
         </div>
 
-        <form id="offert" method="POST" action="{{ \App\Support\Locales::urlFor('contact', app()->getLocale()) }}" class="relative flex scroll-mt-28 flex-col gap-5 rounded-3xl border border-line bg-card p-6 sm:p-8" novalidate>
+        <form id="offert" method="POST" action="{{ \App\Support\Locales::urlFor('contact', app()->getLocale()) }}" class="relative flex min-w-0 scroll-mt-28 flex-col gap-5 rounded-3xl border border-line bg-card p-5 sm:p-8" novalidate>
             @csrf
 
             <div inert aria-hidden="true" class="pointer-events-none absolute h-px w-px overflow-hidden" style="clip-path: inset(50%)">
@@ -91,8 +92,9 @@
                 @enderror
             </div>
 
-            <button type="submit" class="inline-flex items-center justify-center rounded-full bg-pine px-6 py-3 text-sm font-semibold text-paper hover:bg-pine-deep">
+            <button type="submit" class="site-button bg-pine text-paper hover:bg-pine-deep">
                 {{ __('site.form.submit') }}
+                <x-icon />
             </button>
 
             <p class="text-sm leading-6 text-muted">

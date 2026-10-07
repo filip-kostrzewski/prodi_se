@@ -36,7 +36,8 @@ return [
 
     'hero' => [
         'eyebrow' => 'Webbyrå i Märsta',
-        'title' => 'En hemsida för ditt företag. Klar på cirka två veckor.',
+        'title' => 'En hemsida för',
+        'title_highlight' => 'ditt företag.',
         'lead' => 'Vi bygger en hemsida åt ditt företag, på svenska, polska och fler språk när det behövs, sätter upp din Google-företagsprofil och ett kontaktformulär. Klart på cirka två veckor, från 4 900 kr exkl. moms.',
         'primary' => 'Begär offert',
         'secondary' => 'Se paketen',

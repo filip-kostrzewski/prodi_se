@@ -6,8 +6,11 @@
 @endphp
 
 <span {{ $attributes->class('inline-flex items-center gap-2.5') }}>
-    <img src="{{ asset('images/prodi-icon.png') }}" alt="" width="115" height="150" class="{{ $iconClass }} shrink-0 object-contain">
+    <picture class="shrink-0">
+        <source srcset="{{ asset('images/prodi-icon.webp') }}" type="image/webp">
+        <img src="{{ asset('images/prodi-icon.png') }}" alt="" width="131" height="166" class="{{ $iconClass }} object-contain">
+    </picture>
     <span class="{{ $textClass }} font-sans leading-none tracking-tight">
-        <span class="font-medium text-[#8a8580]">Pro</span><span class="font-semibold text-ink">di</span>
+        <span class="font-medium text-muted">Pro</span><span class="font-semibold text-ink">di</span>
     </span>
 </span>
