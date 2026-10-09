@@ -182,8 +182,13 @@ final class StructuredData
         ];
     }
 
+    /**
+     * Site root built by the same URL generator as canonical and sitemap
+     * URLs, so it follows the forwarded HTTPS scheme behind the proxy
+     * instead of a possibly http:// APP_URL.
+     */
     private static function baseUrl(): string
     {
-        return rtrim((string) config('app.url'), '/');
+        return rtrim(url('/'), '/');
     }
 }
