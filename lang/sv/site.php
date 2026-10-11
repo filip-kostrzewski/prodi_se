@@ -411,6 +411,7 @@ return [
             'message_required' => 'Skriv ett kort meddelande.',
             'message_max' => 'Meddelandet får vara högst 5 000 tecken.',
             'mail_failed' => 'Förfrågan är sparad, men mejlet gick inte iväg. Skriv till :email så tar vi det därifrån.',
+            'verification_failed' => 'Vi kunde inte bekräfta att du inte är en robot. Försök igen.',
         ],
     ],
 

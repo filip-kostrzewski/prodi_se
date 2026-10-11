@@ -65,6 +65,14 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'contact_spam' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/contact-spam.log'),
+            'level' => 'debug',
+            'days' => 90,
+            'replace_placeholders' => true,
+        ],
+
         'daily' => [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),

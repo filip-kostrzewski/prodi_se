@@ -23,6 +23,8 @@ class ContactInquiry extends Model
         'package',
         'message',
         'locale',
+        'ip_address',
+        'spam_reason',
     ];
 
     /**

@@ -60,6 +60,19 @@ Do not invent these. Leave them empty until they are known.
 
 `PRODI_NAME` is the brand (`Prodi`). `PRODI_LEGAL_NAME` is the registered company (`Prodi Digital AB`). `PRODI_OWNER` and `PRODI_CITY` already match the studio. Prices are exkl. moms: Start 4 900 kr, Firma 7 900 kr, Opieka 299 kr/month, Individuellt from 9 900 kr, individual quote.
 
+## Contact form spam protection
+
+Checks run in this order on `POST /kontakt` and `POST /pl/kontakt`:
+
+1. Rate limit: 5 requests per 10 minutes per client IP (`throttle:contact`).
+2. Honeypot field `website_url`: dropped with a normal thank-you, logged.
+3. Minimum fill time: an encrypted timestamp in `form_started`; a post under `CONTACT_MIN_FILL_SECONDS` (3) is dropped with a normal thank-you, logged. A missing timer is let through.
+4. Cloudflare Turnstile, only when `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` are both set. A failed check shows an error; an unreachable Cloudflare lets the request through.
+5. Blocklist in `config/contact.php` (`CONTACT_BLOCKED_EMAILS`, `CONTACT_BLOCKED_IPS`).
+6. AI yes / no decision with the Laravel AI SDK (`Str::decide`), provider `CONTACT_AI_PROVIDER` (default `typesafe`, key `TYPESAFE_API_KEY`). No key, an error or a timeout (10 s) lets the inquiry through.
+
+Blocked and AI-rejected inquiries are kept in `contact_inquiries` with `spam_reason` set and are not emailed. Every held-back submission is written to `storage/logs/contact-spam-*.log`. Test the AI without saving or sending anything: `php artisan contact:check-spam --name="..." --message="..."`.
+
 ## Add another language
 
 1. Copy `lang/sv/site.php` to `lang/<code>/site.php` and translate it.

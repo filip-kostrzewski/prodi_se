@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
 
 class DiscardFilledHoneypot
@@ -21,6 +22,13 @@ class DiscardFilledHoneypot
         $value = trim((string) $request->input(self::FIELD, ''));
 
         if ($value !== '') {
+            Log::channel('contact_spam')->notice('Contact form submission held back: honeypot', [
+                'reason' => 'honeypot',
+                'ip' => $request->ip(),
+                'user_agent' => (string) $request->userAgent(),
+                'email' => (string) $request->input('email'),
+            ]);
+
             return back()->with('status', __('site.form.success'));
         }
 

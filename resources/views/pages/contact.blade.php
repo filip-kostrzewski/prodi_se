@@ -29,6 +29,7 @@
             <div inert aria-hidden="true" class="pointer-events-none absolute h-px w-px overflow-hidden" style="clip-path: inset(50%)">
                 <input id="website_url" name="website_url" type="text" tabindex="-1" autocomplete="off" value="">
             </div>
+            <input type="hidden" name="{{ \App\Support\ContactFormTimer::FIELD }}" value="{{ \App\Support\ContactFormTimer::issue() }}">
 
             @if (session('status'))
                 <p role="status" class="rounded-2xl bg-mist px-4 py-3 text-base">{{ session('status') }}</p>
@@ -91,6 +92,11 @@
                     <p id="message-error" class="text-sm text-clay">{{ $message }}</p>
                 @enderror
             </div>
+
+            @if (\App\Support\ContactSpamGuard::turnstileEnabled())
+                <div class="cf-turnstile" data-sitekey="{{ config('contact.turnstile.site_key') }}" data-language="{{ app()->getLocale() }}"></div>
+                <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+            @endif
 
             <button type="submit" class="site-button bg-pine text-paper hover:bg-pine-deep">
                 {{ __('site.form.submit') }}

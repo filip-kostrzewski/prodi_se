@@ -29,6 +29,10 @@
         <env name="MAIL_MAILER" value="array"/>
         <env name="PRODI_CONTACT_EMAIL" value="owner@example.com"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="TYPESAFE_API_KEY" value=""/>
+        <env name="OPENAI_API_KEY" value=""/>
+        <env name="TURNSTILE_SITE_KEY" value=""/>
+        <env name="TURNSTILE_SECRET_KEY" value=""/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>
