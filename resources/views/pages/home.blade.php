@@ -99,6 +99,9 @@
                 @foreach ([
                     'evasstad' => ['url' => 'https://evasstad.se', 'image' => 'images/work/evasstad.jpg'],
                     'wisegent' => ['url' => 'https://wisegent.se/se', 'image' => 'images/work/wisegent.jpg'],
+                    'klartfoto' => ['url' => 'https://klartfoto.se', 'image' => 'images/work/klartfoto.jpg'],
+                    'bagspar' => ['url' => 'https://bagspar.se', 'image' => 'images/work/bagspar.jpg'],
+                    'dackflow' => ['url' => 'https://dackflow.se', 'image' => 'images/work/dackflow.jpg'],
                 ] as $key => $site)
                     <a href="{{ $site['url'] }}" target="_blank" rel="noopener noreferrer" class="work-card group flex min-w-0 flex-col overflow-hidden rounded-2xl border border-line bg-card">
                         <div @class(['work-preview', 'bg-[#ede9df]' => $key === 'wisegent'])>

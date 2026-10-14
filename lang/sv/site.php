@@ -188,7 +188,7 @@ return [
 
     'examples' => [
         'title' => 'Webbplatser med egen karaktär.',
-        'intro' => 'En kundwebbplats och vår egen SaaS. Utforska de riktiga sidorna.',
+        'intro' => 'Kundwebbplatser, produktsidor och vår egen SaaS. Utforska de riktiga sidorna.',
         'new_tab' => 'öppnas i en ny flik',
         'secondary_title' => 'Så kan ett Start- eller Firma-paket se ut',
         'secondary_intro' => 'Två exempeldesigner att utforska. De är demo, inte levererade kundwebbplatser.',
@@ -210,6 +210,27 @@ return [
                 'text' => 'System för städföretag: schema, fakturering och RUT. Sidan är vår egen produkt, inte en kundsajt.',
                 'open' => 'Öppna wisegent.se',
                 'image_alt' => 'Skärmbild av startsidan på wisegent.se, system för städföretag.',
+            ],
+            'klartfoto' => [
+                'kicker' => 'Levererad webbplats',
+                'title' => 'Klartfoto — fotodokumentation för serviceföretag',
+                'text' => 'Produktsida för ett verktyg som samlar före- och efterbilder, arbetsnoteringar och en rapport till kunden. Finns på sju språk.',
+                'open' => 'Öppna klartfoto.se',
+                'image_alt' => 'Skärmbild av startsidan på klartfoto.se, fotodokumentation för serviceföretag.',
+            ],
+            'bagspar' => [
+                'kicker' => 'Levererad webbplats',
+                'title' => 'Bågspår — arbetskort för fönsterrenovering',
+                'text' => 'Sida för ett planerat verktyg för fönsterverkstäder: märkning, bilder och arbetssteg per båge, med intresseanmälan till pilotprojektet.',
+                'open' => 'Öppna bagspar.se',
+                'image_alt' => 'Skärmbild av startsidan på bagspar.se, arbetskort för fönsterrenovering.',
+            ],
+            'dackflow' => [
+                'kicker' => 'Levererad webbplats',
+                'title' => 'Däckpilot — bokning och däckhotell',
+                'text' => 'Produktsida för däckverkstäder: onlinebokning av hjulskifte, däckhotell och dagens jobb på ett ställe, med demo av bokningen.',
+                'open' => 'Öppna dackflow.se',
+                'image_alt' => 'Skärmbild av startsidan på dackflow.se, Däckpilot för bokning och däckhotell.',
             ],
         ],
         'preview_cleaning' => 'Förhandsvisning av exempeldesignen för en städfirma',
