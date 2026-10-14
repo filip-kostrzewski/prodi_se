@@ -227,10 +227,10 @@ return [
             ],
             'dackflow' => [
                 'kicker' => 'Egen produkt',
-                'title' => 'Däckpilot — bokning och däckhotell',
+                'title' => 'Dackflow — bokning och däckhotell',
                 'text' => 'Produktsida för däckverkstäder: onlinebokning av hjulskifte, däckhotell och dagens jobb på ett ställe, med demo av bokningen.',
                 'open' => 'Öppna dackflow.se',
-                'image_alt' => 'Skärmbild av startsidan på dackflow.se, Däckpilot för bokning och däckhotell.',
+                'image_alt' => 'Skärmbild av startsidan på dackflow.se, Dackflow för bokning och däckhotell.',
             ],
         ],
         'preview_cleaning' => 'Förhandsvisning av exempeldesignen för en städfirma',

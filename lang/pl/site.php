@@ -227,10 +227,10 @@ return [
             ],
             'dackflow' => [
                 'kicker' => 'Własny produkt',
-                'title' => 'Däckpilot — rezerwacje i przechowalnia opon',
+                'title' => 'Dackflow — rezerwacje i przechowalnia opon',
                 'text' => 'Strona produktu dla warsztatów oponiarskich: rezerwacja wymiany kół online, przechowalnia opon i plan dnia w jednym miejscu, z demo rezerwacji.',
                 'open' => 'Otwórz dackflow.se',
-                'image_alt' => 'Zrzut ekranu strony głównej dackflow.se, Däckpilot do rezerwacji i przechowalni opon.',
+                'image_alt' => 'Zrzut ekranu strony głównej dackflow.se, Dackflow do rezerwacji i przechowalni opon.',
             ],
         ],
         'preview_cleaning' => 'Podgląd przykładowego projektu dla firmy sprzątającej',
