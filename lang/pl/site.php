@@ -188,7 +188,7 @@ return [
 
     'examples' => [
         'title' => 'Każda firma ma swój styl.',
-        'intro' => 'Strony klientów, strony produktów i moja własna SaaS. Zobacz działające projekty.',
+        'intro' => 'Strona klienta i moje własne produkty. Zobacz działające projekty.',
         'new_tab' => 'otwiera się w nowej karcie',
         'secondary_title' => 'Tak może wyglądać pakiet Start albo Firma',
         'secondary_intro' => 'Dwa projekty demonstracyjne do obejrzenia. To przykłady, nie realizacje klientów.',
@@ -212,21 +212,21 @@ return [
                 'image_alt' => 'Zrzut ekranu strony głównej wisegent.se, system dla firm sprzątających.',
             ],
             'klartfoto' => [
-                'kicker' => 'Dostarczona strona',
+                'kicker' => 'Własny produkt',
                 'title' => 'Klartfoto — dokumentacja zdjęciowa dla firm usługowych',
                 'text' => 'Strona produktu, który zbiera zdjęcia przed i po, notatki z pracy i raport dla klienta. Dostępna w siedmiu językach.',
                 'open' => 'Otwórz klartfoto.se',
                 'image_alt' => 'Zrzut ekranu strony głównej klartfoto.se, dokumentacja zdjęciowa dla firm usługowych.',
             ],
             'bagspar' => [
-                'kicker' => 'Dostarczona strona',
+                'kicker' => 'Własny produkt',
                 'title' => 'Bågspår — karty pracy przy renowacji okien',
                 'text' => 'Strona planowanego narzędzia dla warsztatów okiennych: oznaczenia, zdjęcia i etapy pracy dla każdego skrzydła, z zapisem do pilotażu.',
                 'open' => 'Otwórz bagspar.se',
                 'image_alt' => 'Zrzut ekranu strony głównej bagspar.se, karty pracy przy renowacji okien.',
             ],
             'dackflow' => [
-                'kicker' => 'Dostarczona strona',
+                'kicker' => 'Własny produkt',
                 'title' => 'Däckpilot — rezerwacje i przechowalnia opon',
                 'text' => 'Strona produktu dla warsztatów oponiarskich: rezerwacja wymiany kół online, przechowalnia opon i plan dnia w jednym miejscu, z demo rezerwacji.',
                 'open' => 'Otwórz dackflow.se',

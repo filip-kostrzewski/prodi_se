@@ -188,7 +188,7 @@ return [
 
     'examples' => [
         'title' => 'Webbplatser med egen karaktär.',
-        'intro' => 'Kundwebbplatser, produktsidor och vår egen SaaS. Utforska de riktiga sidorna.',
+        'intro' => 'En kundwebbplats och våra egna produkter. Utforska de riktiga sidorna.',
         'new_tab' => 'öppnas i en ny flik',
         'secondary_title' => 'Så kan ett Start- eller Firma-paket se ut',
         'secondary_intro' => 'Två exempeldesigner att utforska. De är demo, inte levererade kundwebbplatser.',
@@ -212,21 +212,21 @@ return [
                 'image_alt' => 'Skärmbild av startsidan på wisegent.se, system för städföretag.',
             ],
             'klartfoto' => [
-                'kicker' => 'Levererad webbplats',
+                'kicker' => 'Egen produkt',
                 'title' => 'Klartfoto — fotodokumentation för serviceföretag',
                 'text' => 'Produktsida för ett verktyg som samlar före- och efterbilder, arbetsnoteringar och en rapport till kunden. Finns på sju språk.',
                 'open' => 'Öppna klartfoto.se',
                 'image_alt' => 'Skärmbild av startsidan på klartfoto.se, fotodokumentation för serviceföretag.',
             ],
             'bagspar' => [
-                'kicker' => 'Levererad webbplats',
+                'kicker' => 'Egen produkt',
                 'title' => 'Bågspår — arbetskort för fönsterrenovering',
                 'text' => 'Sida för ett planerat verktyg för fönsterverkstäder: märkning, bilder och arbetssteg per båge, med intresseanmälan till pilotprojektet.',
                 'open' => 'Öppna bagspar.se',
                 'image_alt' => 'Skärmbild av startsidan på bagspar.se, arbetskort för fönsterrenovering.',
             ],
             'dackflow' => [
-                'kicker' => 'Levererad webbplats',
+                'kicker' => 'Egen produkt',
                 'title' => 'Däckpilot — bokning och däckhotell',
                 'text' => 'Produktsida för däckverkstäder: onlinebokning av hjulskifte, däckhotell och dagens jobb på ett ställe, med demo av bokningen.',
                 'open' => 'Öppna dackflow.se',
