@@ -188,7 +188,7 @@ return [
 
     'examples' => [
         'title' => 'Każda firma ma swój styl.',
-        'intro' => 'Strona klienta i moje własne produkty. Zobacz działające projekty.',
+        'intro' => 'Strony klientów i moje własne produkty. Zobacz działające projekty.',
         'new_tab' => 'otwiera się w nowej karcie',
         'secondary_title' => 'Tak może wyglądać pakiet Start albo Firma',
         'secondary_intro' => 'Dwa projekty demonstracyjne do obejrzenia. To przykłady, nie realizacje klientów.',
@@ -204,10 +204,17 @@ return [
                 'open' => 'Otwórz evasstad.se',
                 'image_alt' => 'Zrzut ekranu strony głównej evasstad.se dla Evas Städ AB.',
             ],
+            'polfood' => [
+                'kicker' => 'Dostarczona strona',
+                'title' => 'Strona dla polskiego sklepu spożywczego — polfood.se',
+                'text' => 'POLFOOD, polski sklep spożywczy i hurtownia przy Torsgatan 49 w Sztokholmie. Nowoczesna strona po szwedzku i po polsku, z asortymentem i sklepem online.',
+                'open' => 'Otwórz polfood.se',
+                'image_alt' => 'Zrzut ekranu strony głównej polfood.se dla POLFOOD w Sztokholmie.',
+            ],
             'wisegent' => [
                 'kicker' => 'Własny produkt',
                 'title' => 'Wisegent — moja własna SaaS',
-                'text' => 'System dla firm sprzątających: grafik, faktury i RUT. To moja własna usługa, nie strona klienta.',
+                'text' => 'System dla firm sprzątających: planowanie z AI, aplikacja mobilna, faktury i RUT. To moja własna usługa, nie strona klienta.',
                 'open' => 'Otwórz wisegent.se',
                 'image_alt' => 'Zrzut ekranu strony głównej wisegent.se, system dla firm sprzątających.',
             ],

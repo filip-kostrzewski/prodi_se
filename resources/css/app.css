@@ -269,10 +269,6 @@
         padding: 2rem 2rem 0;
     }
 
-    .work-card:nth-child(2) .work-preview {
-        background: #e8e2f0;
-    }
-
     .work-preview .project-window {
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
