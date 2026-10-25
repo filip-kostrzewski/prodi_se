@@ -278,13 +278,9 @@
         transition: border-color 160ms ease;
     }
 
-    .work-card:hover {
+    .work-card:hover,
+    .work-card:focus-visible {
         border-color: var(--color-pine);
-    }
-
-    .work-card:hover .work-arrow {
-        background: var(--color-pine);
-        color: var(--color-paper);
     }
 
     .faq-item summary {
@@ -349,6 +345,24 @@
         .site-button:hover {
             transform: none;
         }
+    }
+}
+
+/* Utilities layer: a component-layer color loses to the resting `text-pine` class and hides the arrow. */
+@layer utilities {
+    .work-card:hover .work-arrow,
+    .work-card:focus-visible .work-arrow,
+    .work-arrow:hover {
+        background-color: var(--color-pine);
+        border-color: var(--color-pine);
+        color: var(--color-paper);
+    }
+
+    .work-card:hover .work-arrow svg,
+    .work-card:focus-visible .work-arrow svg,
+    .work-arrow:hover svg {
+        color: var(--color-paper);
+        stroke: currentColor;
     }
 }
 

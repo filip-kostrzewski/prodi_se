@@ -121,7 +121,9 @@
                             </div>
                         </div>
                         <div class="flex flex-1 flex-col gap-3 p-5 sm:p-7">
-                            <p class="eyebrow text-xs text-clay">{{ __("site.examples.work.$key.kicker") }}</p>
+                            @if ($kicker = __("site.examples.work.$key.kicker"))
+                                <p class="eyebrow text-xs text-clay">{{ $kicker }}</p>
+                            @endif
                             <h3 class="font-serif text-2xl leading-tight tracking-tight sm:text-3xl">{{ __("site.examples.work.$key.title") }}</h3>
                             <p class="text-sm leading-6 text-muted">{{ __("site.examples.work.$key.text") }}</p>
                             <div class="mt-auto flex items-center justify-between gap-4 pt-4">
@@ -129,7 +131,7 @@
                                     {{ __("site.examples.work.$key.open") }}
                                     <span class="sr-only"> ({{ __('site.examples.new_tab') }})</span>
                                 </span>
-                                <span class="work-arrow flex size-11 shrink-0 items-center justify-center rounded-full border border-line text-pine"><x-icon name="external" /></span>
+                                <span class="work-arrow flex size-11 shrink-0 items-center justify-center rounded-full border border-line text-pine group-hover:border-pine group-hover:bg-pine group-hover:text-paper group-focus-visible:border-pine group-focus-visible:bg-pine group-focus-visible:text-paper"><x-icon name="external" class="group-hover:text-paper group-focus-visible:text-paper" /></span>
                             </div>
                         </div>
                     </a>
