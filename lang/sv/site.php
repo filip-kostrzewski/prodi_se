@@ -198,42 +198,36 @@ return [
         'open' => 'Öppna exemplet',
         'work' => [
             'evasstad' => [
-                'kicker' => 'Levererad webbplats',
                 'title' => 'Webbplats för städfirma — evasstad.se',
                 'text' => 'Evas Städ AB, städfirma i Stockholm och Åkersberga. Sidfoten krediterar Design by Wisegent.',
                 'open' => 'Öppna evasstad.se',
                 'image_alt' => 'Skärmbild av startsidan på evasstad.se för Evas Städ AB.',
             ],
             'polfood' => [
-                'kicker' => 'Levererad webbplats',
                 'title' => 'Webbplats för polsk matbutik — polfood.se',
                 'text' => 'POLFOOD, polsk matbutik och grossist på Torsgatan 49 i Stockholm. Sidan finns på svenska och polska, med sortiment och webbshop.',
                 'open' => 'Öppna polfood.se',
                 'image_alt' => 'Skärmbild av startsidan på polfood.se för POLFOOD i Stockholm.',
             ],
             'wisegent' => [
-                'kicker' => '',
                 'title' => 'Wisegent — system för städföretag',
                 'text' => 'System för städföretag: AI-planering, mobilapp, fakturering och RUT.',
                 'open' => 'Öppna wisegent.se',
                 'image_alt' => 'Skärmbild av startsidan på wisegent.se, system för städföretag.',
             ],
             'klartfoto' => [
-                'kicker' => '',
                 'title' => 'Klartfoto — fotodokumentation för serviceföretag',
                 'text' => 'Produktsida för ett verktyg som samlar före- och efterbilder, arbetsnoteringar och en rapport till kunden. Finns på sju språk.',
                 'open' => 'Öppna klartfoto.se',
                 'image_alt' => 'Skärmbild av startsidan på klartfoto.se, fotodokumentation för serviceföretag.',
             ],
             'bagspar' => [
-                'kicker' => '',
                 'title' => 'Bågspår — arbetskort för fönsterrenovering',
                 'text' => 'Sida för ett planerat verktyg för fönsterverkstäder: märkning, bilder och arbetssteg per båge, med intresseanmälan till pilotprojektet.',
                 'open' => 'Öppna bagspar.se',
                 'image_alt' => 'Skärmbild av startsidan på bagspar.se, arbetskort för fönsterrenovering.',
             ],
             'dackflow' => [
-                'kicker' => '',
                 'title' => 'Dackflow — bokning och däckhotell',
                 'text' => 'Produktsida för däckverkstäder: onlinebokning av hjulskifte, däckhotell och dagens jobb på ett ställe, med demo av bokningen.',
                 'open' => 'Öppna dackflow.se',

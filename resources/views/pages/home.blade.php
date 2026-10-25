@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <aside class="hero-showcase" aria-label="{{ __('site.examples.work.evasstad.kicker') }}">
+            <aside class="hero-showcase" aria-label="{{ __('site.examples.work.evasstad.title') }}">
                 <svg class="hero-drawing" viewBox="0 0 540 500" fill="none" aria-hidden="true">
                     <path d="M70 177c-18-77 38-128 124-138M43 211C19 114 62 53 151 24" stroke="#a3b99d" stroke-width="2" stroke-linecap="round" />
                     <path d="M192 68c91-38 216 15 251 121m-58-42 45 18-12-47" stroke="#a3b99d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -121,9 +121,6 @@
                             </div>
                         </div>
                         <div class="flex flex-1 flex-col gap-3 p-5 sm:p-7">
-                            @if ($kicker = __("site.examples.work.$key.kicker"))
-                                <p class="eyebrow text-xs text-clay">{{ $kicker }}</p>
-                            @endif
                             <h3 class="font-serif text-2xl leading-tight tracking-tight sm:text-3xl">{{ __("site.examples.work.$key.title") }}</h3>
                             <p class="text-sm leading-6 text-muted">{{ __("site.examples.work.$key.text") }}</p>
                             <div class="mt-auto flex items-center justify-between gap-4 pt-4">

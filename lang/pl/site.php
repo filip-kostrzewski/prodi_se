@@ -198,42 +198,36 @@ return [
         'open' => 'Otwórz przykład',
         'work' => [
             'evasstad' => [
-                'kicker' => 'Dostarczona strona',
                 'title' => 'Strona dla firmy sprzątającej — evasstad.se',
                 'text' => 'Evas Städ AB, firma sprzątająca w Sztokholmie i Åkersberga. W stopce jest „Design by Wisegent”.',
                 'open' => 'Otwórz evasstad.se',
                 'image_alt' => 'Zrzut ekranu strony głównej evasstad.se dla Evas Städ AB.',
             ],
             'polfood' => [
-                'kicker' => 'Dostarczona strona',
                 'title' => 'Strona dla polskiego sklepu spożywczego — polfood.se',
                 'text' => 'POLFOOD, polski sklep spożywczy i hurtownia przy Torsgatan 49 w Sztokholmie. Nowoczesna strona po szwedzku i po polsku, z asortymentem i sklepem online.',
                 'open' => 'Otwórz polfood.se',
                 'image_alt' => 'Zrzut ekranu strony głównej polfood.se dla POLFOOD w Sztokholmie.',
             ],
             'wisegent' => [
-                'kicker' => '',
                 'title' => 'Wisegent — system dla firm sprzątających',
                 'text' => 'System dla firm sprzątających: planowanie z AI, aplikacja mobilna, faktury i RUT.',
                 'open' => 'Otwórz wisegent.se',
                 'image_alt' => 'Zrzut ekranu strony głównej wisegent.se, system dla firm sprzątających.',
             ],
             'klartfoto' => [
-                'kicker' => '',
                 'title' => 'Klartfoto — dokumentacja zdjęciowa dla firm usługowych',
                 'text' => 'Strona produktu, który zbiera zdjęcia przed i po, notatki z pracy i raport dla klienta. Dostępna w siedmiu językach.',
                 'open' => 'Otwórz klartfoto.se',
                 'image_alt' => 'Zrzut ekranu strony głównej klartfoto.se, dokumentacja zdjęciowa dla firm usługowych.',
             ],
             'bagspar' => [
-                'kicker' => '',
                 'title' => 'Bågspår — karty pracy przy renowacji okien',
                 'text' => 'Strona planowanego narzędzia dla warsztatów okiennych: oznaczenia, zdjęcia i etapy pracy dla każdego skrzydła, z zapisem do pilotażu.',
                 'open' => 'Otwórz bagspar.se',
                 'image_alt' => 'Zrzut ekranu strony głównej bagspar.se, karty pracy przy renowacji okien.',
             ],
             'dackflow' => [
-                'kicker' => '',
                 'title' => 'Dackflow — rezerwacje i przechowalnia opon',
                 'text' => 'Strona produktu dla warsztatów oponiarskich: rezerwacja wymiany kół online, przechowalnia opon i plan dnia w jednym miejscu, z demo rezerwacji.',
                 'open' => 'Otwórz dackflow.se',
