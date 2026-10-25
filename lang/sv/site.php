@@ -188,7 +188,7 @@ return [
 
     'examples' => [
         'title' => 'Webbplatser med egen karaktär.',
-        'intro' => 'En kundwebbplats och våra egna produkter. Utforska de riktiga sidorna.',
+        'intro' => 'Kundwebbplatser och våra egna produkter. Utforska de riktiga sidorna.',
         'new_tab' => 'öppnas i en ny flik',
         'secondary_title' => 'Så kan ett Start- eller Firma-paket se ut',
         'secondary_intro' => 'Två exempeldesigner att utforska. De är demo, inte levererade kundwebbplatser.',
@@ -204,10 +204,17 @@ return [
                 'open' => 'Öppna evasstad.se',
                 'image_alt' => 'Skärmbild av startsidan på evasstad.se för Evas Städ AB.',
             ],
+            'polfood' => [
+                'kicker' => 'Levererad webbplats',
+                'title' => 'Webbplats för polsk matbutik — polfood.se',
+                'text' => 'POLFOOD, polsk matbutik och grossist på Torsgatan 49 i Stockholm. Sidan finns på svenska och polska, med sortiment och webbshop.',
+                'open' => 'Öppna polfood.se',
+                'image_alt' => 'Skärmbild av startsidan på polfood.se för POLFOOD i Stockholm.',
+            ],
             'wisegent' => [
                 'kicker' => 'Egen produkt',
                 'title' => 'Wisegent — vår egen SaaS',
-                'text' => 'System för städföretag: schema, fakturering och RUT. Sidan är vår egen produkt, inte en kundsajt.',
+                'text' => 'System för städföretag: AI-planering, mobilapp, fakturering och RUT. Sidan är vår egen produkt, inte en kundsajt.',
                 'open' => 'Öppna wisegent.se',
                 'image_alt' => 'Skärmbild av startsidan på wisegent.se, system för städföretag.',
             ],
