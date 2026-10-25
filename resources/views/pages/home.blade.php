@@ -121,7 +121,9 @@
                             </div>
                         </div>
                         <div class="flex flex-1 flex-col gap-3 p-5 sm:p-7">
-                            <p class="eyebrow text-xs text-clay">{{ __("site.examples.work.$key.kicker") }}</p>
+                            @if ($kicker = __("site.examples.work.$key.kicker"))
+                                <p class="eyebrow text-xs text-clay">{{ $kicker }}</p>
+                            @endif
                             <h3 class="font-serif text-2xl leading-tight tracking-tight sm:text-3xl">{{ __("site.examples.work.$key.title") }}</h3>
                             <p class="text-sm leading-6 text-muted">{{ __("site.examples.work.$key.text") }}</p>
                             <div class="mt-auto flex items-center justify-between gap-4 pt-4">

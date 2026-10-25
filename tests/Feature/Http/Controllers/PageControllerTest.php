@@ -67,9 +67,13 @@ class PageControllerTest extends TestCase
         $response->assertSee('Webbplats för städfirma — evasstad.se', false);
         $response->assertSee('Webbplats för polsk matbutik — polfood.se', false);
         $response->assertSee('POLFOOD, polsk matbutik och grossist på Torsgatan 49 i Stockholm. Sidan finns på svenska och polska, med sortiment och webbshop.', false);
-        $response->assertSee('Wisegent — vår egen SaaS', false);
+        $response->assertSee('Utforska de riktiga sidorna.', false);
+        $response->assertSee('Wisegent — system för städföretag', false);
         $response->assertSee('AI-planering, mobilapp, fakturering och RUT', false);
-        $response->assertSee('Egen produkt', false);
+        $response->assertDontSee('Egen produkt', false);
+        $response->assertDontSee('egen produkt', false);
+        $response->assertDontSee('egna produkter', false);
+        $response->assertDontSee('vår egen SaaS', false);
         $response->assertSee('Design by Wisegent', false);
         $response->assertDontSee('Inga kundcase att visa ännu', false);
         $response->assertSee('images/examples/cleaning-hero.jpg', false);
@@ -125,9 +129,14 @@ class PageControllerTest extends TestCase
         $response->assertSee('Strona dla firmy sprzątającej — evasstad.se', false);
         $response->assertSee('Strona dla polskiego sklepu spożywczego — polfood.se', false);
         $response->assertSee('POLFOOD, polski sklep spożywczy i hurtownia przy Torsgatan 49 w Sztokholmie. Nowoczesna strona po szwedzku i po polsku, z asortymentem i sklepem online.', false);
-        $response->assertSee('Wisegent — moja własna SaaS', false);
+        $response->assertSee('Zobacz działające projekty.', false);
+        $response->assertSee('Wisegent — system dla firm sprzątających', false);
         $response->assertSee('planowanie z AI, aplikacja mobilna, faktury i RUT', false);
-        $response->assertSee('Własny produkt', false);
+        $response->assertDontSee('Własny produkt', false);
+        $response->assertDontSee('własny produkt', false);
+        $response->assertDontSee('własne produkty', false);
+        $response->assertDontSee('własna SaaS', false);
+        $response->assertDontSee('własna usługa', false);
         $response->assertDontSee('Nie mamy jeszcze realizacji klientów', false);
         $response->assertSee('hreflang="sv"', false);
     }
