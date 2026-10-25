@@ -70,6 +70,7 @@ class PageControllerTest extends TestCase
         $response->assertSee('Utforska de riktiga sidorna.', false);
         $response->assertSee('Wisegent — system för städföretag', false);
         $response->assertSee('AI-planering, mobilapp, fakturering och RUT', false);
+        $response->assertDontSee('Levererad webbplats', false);
         $response->assertDontSee('Egen produkt', false);
         $response->assertDontSee('egen produkt', false);
         $response->assertDontSee('egna produkter', false);
@@ -132,6 +133,7 @@ class PageControllerTest extends TestCase
         $response->assertSee('Zobacz działające projekty.', false);
         $response->assertSee('Wisegent — system dla firm sprzątających', false);
         $response->assertSee('planowanie z AI, aplikacja mobilna, faktury i RUT', false);
+        $response->assertDontSee('Dostarczona strona', false);
         $response->assertDontSee('Własny produkt', false);
         $response->assertDontSee('własny produkt', false);
         $response->assertDontSee('własne produkty', false);
