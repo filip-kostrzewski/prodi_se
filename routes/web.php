@@ -38,5 +38,10 @@ foreach (Locales::DEFINITIONS as $code => $definition) {
     });
 }
 
+// Hidden preview of the Däckflow booking widget. It stays outside the
+// locale group so it is not copied under /pl, linked from the language
+// switcher, or published by the sitemap (that only lists Locales::PATHS).
+Route::get('/dackflow-test', [PageController::class, 'dackflowPreview'])->name('dackflow-preview');
+
 Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
 Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');

@@ -253,6 +253,33 @@ class PageControllerTest extends TestCase
         $this->get('/pl/exempel/malning/galleri')->assertRedirect('/pl/przyklady/malowanie/galeria');
     }
 
+    public function test_dackflow_preview_renders_the_booking_widget_and_stays_unindexed(): void
+    {
+        $response = $this->get(route('dackflow-preview'));
+
+        $response->assertOk();
+        $response->assertHeader('X-Robots-Tag', 'noindex, nofollow');
+        $response->assertSee('<meta name="robots" content="noindex, nofollow">', false);
+        $response->assertSee('<html lang="sv"', false);
+        $response->assertSee('<div data-dackflow-booking="siemanko" data-title="Boka tid hos Siemanko"></div>', false);
+        $response->assertSee('<script async src="https://dackflow.se/dackflow-booking.js"></script>', false);
+    }
+
+    public function test_public_pages_stay_indexable_and_do_not_link_to_the_dackflow_preview(): void
+    {
+        $this->get(route('sv.home'))
+            ->assertDontSee('/dackflow-test', false)
+            ->assertDontSee('name="robots"', false);
+        $this->get(route('pl.home'))->assertDontSee('/dackflow-test', false);
+        $this->get(route('sv.contact'))->assertDontSee('/dackflow-test', false);
+        $this->get(route('sv.privacy'))->assertDontSee('/dackflow-test', false);
+    }
+
+    public function test_dackflow_preview_is_not_published_under_the_polish_prefix(): void
+    {
+        $this->get('/pl/dackflow-test')->assertNotFound();
+    }
+
     public function test_phone_and_whatsapp_appear_only_when_a_number_is_configured(): void
     {
         $this->get('/')->assertDontSee('wa.me', false)->assertDontSee('tel:', false);

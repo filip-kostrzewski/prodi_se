@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Support\Company;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Response;
 
 class PageController extends Controller
 {
@@ -28,6 +29,16 @@ class PageController extends Controller
         return view('pages.privacy', [
             'title' => __('site.meta.privacy_title'),
             'description' => __('site.meta.privacy_description', ['legal' => Company::legalName()]),
+        ]);
+    }
+
+    public function dackflowPreview(): Response
+    {
+        return response()->view('pages.dackflow-preview', [
+            'title' => 'Boka tid hos Siemanko — Prodi',
+            'description' => 'Förhandsvisning av Däckflow-bokningen, inbäddad på en Prodi-sida.',
+        ], 200, [
+            'X-Robots-Tag' => 'noindex, nofollow',
         ]);
     }
 }

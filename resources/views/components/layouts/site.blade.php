@@ -1,4 +1,4 @@
-@props(['title', 'description'])
+@props(['title', 'description', 'noindex' => false])
 
 @php
     $locale = app()->getLocale();
@@ -16,6 +16,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        @if ($noindex)
+            <meta name="robots" content="noindex, nofollow">
+        @endif
         <x-seo-head :title="$title" :description="$description" />
         @fonts
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
