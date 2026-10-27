@@ -18,6 +18,7 @@ class SeoControllerTest extends TestCase
         $response->assertSee(route('pl.example.cleaning'), false);
         $response->assertSee('hreflang="pl"', false);
         $response->assertSee('hreflang="x-default"', false);
+        $response->assertDontSee('dackflow-test', false);
         $response->assertDontSee('<?php', false);
     }
 
