@@ -280,6 +280,39 @@ class PageControllerTest extends TestCase
         $this->get('/pl/dackflow-test')->assertNotFound();
     }
 
+    public function test_polfood_preview_renders_both_card_images_and_stays_unindexed(): void
+    {
+        $response = $this->get(route('polfood-preview'));
+
+        $response->assertOk();
+        $response->assertHeader('X-Robots-Tag', 'noindex, nofollow');
+        $response->assertSee('<meta name="robots" content="noindex, nofollow">', false);
+        $response->assertSee('<html lang="pl"', false);
+        $response->assertSee('Polfood — projekt wizytówki', false);
+        $response->assertSee('Wizytówka dwustronna, 85 × 55 mm. Przód kremowy z pieczęcią „Anno 1984”, tył burgundowy.', false);
+        $response->assertSee('href="'.asset('images/presentations/polfood/mockup-full.jpg').'"', false);
+        $response->assertSee('src="'.asset('images/presentations/polfood/mockup.webp').'"', false);
+        $response->assertSee('Makieta wizytówek Polfood na jasnym drewnianym blacie: stos burgundowych rewersów z napisem „smacznego!” i kremowy awers z pieczęcią „Anno 1984”.', false);
+        $response->assertSee('href="'.asset('images/presentations/polfood/flat-full.jpg').'"', false);
+        $response->assertSee('src="'.asset('images/presentations/polfood/flat.webp').'"', false);
+        $response->assertSee('Płaski podgląd wizytówki Polfood, 85 × 55 mm: kremowy przód z logo Polfood i pieczęcią „Anno 1984” oraz burgundowy tył z danymi kontaktowymi.', false);
+    }
+
+    public function test_public_pages_do_not_link_to_the_polfood_preview(): void
+    {
+        $this->get(route('sv.home'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+        $this->get(route('pl.home'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+        $this->get(route('sv.contact'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+        $this->get(route('pl.contact'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+        $this->get(route('sv.privacy'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+        $this->get(route('pl.privacy'))->assertDontSee('/p/polfood-wizytowki-k7m4', false);
+    }
+
+    public function test_polfood_preview_is_not_published_under_the_polish_prefix(): void
+    {
+        $this->get('/pl/p/polfood-wizytowki-k7m4')->assertNotFound();
+    }
+
     public function test_phone_and_whatsapp_appear_only_when_a_number_is_configured(): void
     {
         $this->get('/')->assertDontSee('wa.me', false)->assertDontSee('tel:', false);

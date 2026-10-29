@@ -43,5 +43,13 @@ foreach (Locales::DEFINITIONS as $code => $definition) {
 // switcher, or published by the sitemap (that only lists Locales::PATHS).
 Route::get('/dackflow-test', [PageController::class, 'dackflowPreview'])->name('dackflow-preview');
 
+// Hidden client presentation for the Polfood business cards. Same
+// constraints as the Däckflow preview: outside the locale group, so it
+// is not copied under /pl, linked from the menu or language switcher,
+// or published by the sitemap (that only lists Locales::PATHS).
+Route::middleware('locale:pl')
+    ->get('/p/polfood-wizytowki-k7m4', [PageController::class, 'polfoodPreview'])
+    ->name('polfood-preview');
+
 Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
 Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');

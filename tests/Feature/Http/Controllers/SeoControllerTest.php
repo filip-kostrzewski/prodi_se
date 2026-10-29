@@ -19,6 +19,7 @@ class SeoControllerTest extends TestCase
         $response->assertSee('hreflang="pl"', false);
         $response->assertSee('hreflang="x-default"', false);
         $response->assertDontSee('dackflow-test', false);
+        $response->assertDontSee('polfood-wizytowki-k7m4', false);
         $response->assertDontSee('<?php', false);
     }
 

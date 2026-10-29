@@ -41,4 +41,14 @@ class PageController extends Controller
             'X-Robots-Tag' => 'noindex, nofollow',
         ]);
     }
+
+    public function polfoodPreview(): Response
+    {
+        return response()->view('pages.polfood-preview', [
+            'title' => 'Polfood — projekt wizytówki — Prodi',
+            'description' => 'Wizytówka dwustronna, 85 × 55 mm. Przód kremowy z pieczęcią „Anno 1984”, tył burgundowy.',
+        ], 200, [
+            'X-Robots-Tag' => 'noindex, nofollow',
+        ]);
+    }
 }
